@@ -1,0 +1,273 @@
+/* ═══════════════════════════════════════
+       variables
+═══════════════════════════════════════ */
+:root {
+    /* Gold */
+    --gold-light: #E8C97A;
+    --gold: #C9A84C;
+    --gold-dark: #A07830;
+
+    /* Lapis */
+    --lapis-light: #2E6FA8;
+    --lapis: #1F4E79;
+    --lapis-dark: #143352;
+
+    /* Obsidian */
+    --obsidian-light: #2A2015;
+    --obsidian: #1A1209;
+    --obsidian-dark: #0D0A05;
+
+    /* Papyrus */
+    --papyrus-light: #FAF0DC;
+    --papyrus: #F5E6C8;
+    --papyrus-dark: #D4A853;
+
+    /* Sand */
+    --sand-light: #E8D5A3;
+    --sand: #D4A853;
+    --sand-dark: #B8892E;
+
+    /* transetion */
+    --trans: 0.3s
+}
+
+/* ═══════════════════════════════════════
+       RESET
+═══════════════════════════════════════ */
+
+*, *::before, *::after 
+{ 
+ margin:0;  
+ padding:0; 
+ box-sizing:border-box; 
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background:
+   radial-gradient(circle at 50% 40%, #b88a2e2c 0%, transparent 80%),
+   var(--obsidian-dark);
+  position: relative;
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+}
+
+#egypt-bg{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+@keyframes dw-up {
+  0% {
+    transform: translateY(20);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(20);
+  }
+}
+
+@keyframes up-dw {
+  0% {
+    transform: translateY(-20);
+  }
+
+  40% {
+    transform: translateY(20px);
+  }
+
+  60% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20);
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(30px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* start main page */
+.hero{
+  scroll-snap-align: start
+}
+
+.hero .content-top img{
+  animation:fadeUp 1s 0.2s ease both;
+}
+
+.content-top .tittle{
+font-size:clamp(20px,4vw,30px);
+color: var(--papyrus);
+font-family: "Amiri", serif;
+animation:fadeUp 1s 0.3s ease both;
+}
+
+.content-top .paragraph{
+font-size: 18px;
+color: #8A7E68;
+width: 50%;
+animation:fadeUp 1s 0.4s ease both;
+}
+
+@media (max-width:870px) {
+.content-top .paragraph{
+width: 100%;
+}
+.content-top img{
+  width:320px;
+  height:200px;
+}
+}
+
+.content-top .btn-journey{
+background-color: var(--sand-dark);
+padding: 15px 40px;
+border-radius: 60px;
+transition: var(--trans);
+animation:fadeUp 1s 0.5s ease both;
+}
+
+.content-top .btn-journey:hover{
+background-color: var(--sand-light);
+transform: translateY(-4px);
+}
+
+.hero .hero-scroll{
+  animation:fadeUp 1s 0.6s ease both;
+  left: 49.5%; 
+  bottom:35px;
+}
+
+.hero-scroll-dott{
+  width: 5px; 
+  height: 9px; 
+  right: 9.5px; 
+  bottom: 25px ;
+  background-color: var(--gold);
+  animation: scroll 1.5s ease-in-out infinite;
+}
+
+
+@keyframes scroll{
+  0%{
+     transform: translateY(0px);
+     opacity: 1;
+  }
+
+  100%{
+    transform: translateY(15px);
+     opacity: 0;
+  }
+}
+
+
+.explor{
+  scroll-snap-align: start
+}
+
+.content-bottom .sub-tittle{
+  color: var(--papyrus);
+}
+
+.card{
+  transition: var(--trans);
+  border: 0px solid black;
+  box-shadow: 0px 0px 20px var(--gold);
+  flex: 1 1 360px 475px;
+}
+
+.card-animation{
+  transform: translateY(100px);
+  opacity: 0;
+
+}
+
+@keyframes fade {
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.card img{
+  transition: var(--trans);
+  object-fit: cover;
+}
+
+.card .imge::before{
+content: "";
+position: absolute;
+background-color: rgba(0, 0, 0, 0.377);
+z-index: 2;
+inset: 0;
+}
+
+.card:hover img{
+  transform: scale(1.07);
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 90px var(--gold);
+}
+
+.card .imge .overlay{
+padding: 20px;
+bottom: 0px;
+position: relative;
+}
+
+.card .card-tittle{
+  font-size: 25px;
+  font-family: "Amiri", serif;
+}
+
+.card .card-paragraph{
+  font-size: 14px;
+  color: var(--papyrus-light);
+}
+
+.card .link{
+  font-size: 13px;
+  color: white;
+  transition: var(--trans);
+}
+
+.card:hover .link{
+  color: var(--papyrus-dark);
+}
+
+.card .icon{
+transition: var(--trans);
+}
+
+.card:hover .icon{
+  transform: translateX(-4px);
+  color: var(--gold);
+}
+
+footer span{
+  letter-spacing: 4px;
+  color: #b88a2e3c;
+}
