@@ -56,9 +56,9 @@ body{
 }
 
 #egypt-bg{
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
 
 @keyframes dw-up {
@@ -102,40 +102,28 @@ body{
   to   { opacity:1; transform:translateY(0); }
 }
 
-/* start main page */
-.hero{
-  scroll-snap-align: start
-}
-
+/* ═══════════════════════════════════════
+       HERO
+═══════════════════════════════════════ */
 .hero .content-top img{
   animation:fadeUp 1s 0.2s ease both;
 }
 
-.content-top .tittle{
+.hero  .content-top .tittle{
 font-size:clamp(20px,4vw,30px);
 color: var(--papyrus);
 font-family: "Amiri", serif;
 animation:fadeUp 1s 0.3s ease both;
 }
 
-.content-top .paragraph{
+.hero  .content-top .paragraph{
 font-size: 18px;
 color: #8A7E68;
 width: 50%;
 animation:fadeUp 1s 0.4s ease both;
 }
 
-@media (max-width:870px) {
-.content-top .paragraph{
-width: 100%;
-}
-.content-top img{
-  width:320px;
-  height:200px;
-}
-}
-
-.content-top .btn-journey{
+.hero .content-top .btn-journey{
 background-color: var(--sand-dark);
 padding: 15px 40px;
 border-radius: 60px;
@@ -143,26 +131,25 @@ transition: var(--trans);
 animation:fadeUp 1s 0.5s ease both;
 }
 
-.content-top .btn-journey:hover{
+.hero .content-top .btn-journey:hover{
 background-color: var(--sand-light);
 transform: translateY(-4px);
 }
 
-.hero .hero-scroll{
+.hero .content-top .hero-scroll{
   animation:fadeUp 1s 0.6s ease both;
   left: 49.5%; 
   bottom:35px;
 }
 
-.hero-scroll-dott{
+.hero .content-top .hero-scroll-dott{
   width: 5px; 
   height: 9px; 
-  right: 9.5px; 
+  right: 9.7px; 
   bottom: 25px ;
   background-color: var(--gold);
   animation: scroll 1.5s ease-in-out infinite;
 }
-
 
 @keyframes scroll{
   0%{
@@ -176,26 +163,42 @@ transform: translateY(-4px);
   }
 }
 
+/* ═══════════════════════════════════════
+     Responsive for pohones
+═══════════════════════════════════════ */
 
-.explor{
-  scroll-snap-align: start
+@media (max-width:870px) {
+.content-top .paragraph{
+width: 100%;
+}
+.content-top img{
+  width:320px;
+  height:200px;
+}
 }
 
-.content-bottom .sub-tittle{
+/* ═══════════════════════════════════════
+     LINE
+═══════════════════════════════════════ */
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: var(--papyrus-light);
+  border-radius: 100px;
+}
+
+/* ═══════════════════════════════════════
+     EXPLOR SEC
+═══════════════════════════════════════ */
+
+.explor .content-bottom .sub-tittle{
   color: var(--papyrus);
 }
 
-.card{
-  transition: var(--trans);
-  border: 0px solid black;
-  box-shadow: 0px 0px 20px var(--gold);
-  flex: 1 1 360px 475px;
-}
-
-.card-animation{
+.explor .content-bottom .card-animation{
   transform: translateY(100px);
   opacity: 0;
-
 }
 
 @keyframes fade {
@@ -210,12 +213,19 @@ transform: translateY(-4px);
   }
 }
 
-.card img{
+.explor .content-bottom .card{
+  transition: var(--trans);
+  border: 0px solid black;
+  box-shadow: 0px 0px 20px var(--gold);
+  flex: 1 1 360px 475px;
+}
+
+.explor .content-bottom .card img{
   transition: var(--trans);
   object-fit: cover;
 }
 
-.card .imge::before{
+.explor .content-bottom .card .imge::before{
 content: "";
 position: absolute;
 background-color: rgba(0, 0, 0, 0.377);
@@ -223,49 +233,53 @@ z-index: 2;
 inset: 0;
 }
 
-.card:hover img{
+.explor .content-bottom .card:hover img{
   transform: scale(1.07);
 }
 
-.card:hover{
+.explor .content-bottom .card:hover{
   transform: translateY(-10px);
   box-shadow: 0px 0px 90px var(--gold);
 }
 
-.card .imge .overlay{
+.explor .content-bottom .card .imge .overlay{
 padding: 20px;
 bottom: 0px;
 position: relative;
 }
 
-.card .card-tittle{
+.explor .content-bottom .card .card-tittle{
   font-size: 25px;
   font-family: "Amiri", serif;
 }
 
-.card .card-paragraph{
+.explor .content-bottom .card .card-paragraph{
   font-size: 14px;
   color: var(--papyrus-light);
 }
 
-.card .link{
+.explor .content-bottom .card .link{
   font-size: 13px;
   color: white;
   transition: var(--trans);
 }
 
-.card:hover .link{
+.explor .content-bottom .card:hover .link{
   color: var(--papyrus-dark);
 }
 
-.card .icon{
+.explor .content-bottom .card .icon{
 transition: var(--trans);
 }
 
-.card:hover .icon{
+.explor .content-bottom .card:hover .icon{
   transform: translateX(-4px);
   color: var(--gold);
 }
+
+/* ═══════════════════════════════════════
+     footer
+═══════════════════════════════════════ */
 
 footer span{
   letter-spacing: 4px;
