@@ -168,12 +168,19 @@ transform: translateY(-4px);
 ═══════════════════════════════════════ */
 
 @media (max-width:870px) {
-.content-top .paragraph{
+.hero  .content-top .paragraph{
 width: 100%;
 }
+
 .content-top img{
   width:320px;
   height:200px;
+}
+
+.hero .content-top .hero-scroll{
+  animation:fadeUp 1s 0.6s ease both;
+  left: 49.5%; 
+  bottom:55px;
 }
 }
 
