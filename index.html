@@ -25,7 +25,15 @@
       <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="main-page_body">
+
+<!-- ============to top for body=========== -->
+
+<button class="btn-up_body z-2 position-fixed overflow-hidden" id="btn-up_body">
+  <i class="fa-solid fa-arrow-up position-absolute icon "></i>
+  <i class="fa-solid fa-arrow-up position-absolute icon2"></i>
+</button>
+
     
 <svg id="egypt-bg"></svg>
 
@@ -34,13 +42,14 @@
 
   <!--=========start hero========= -->
 <section class="hero position-relative vh-100 pb-5">
-  <div class="content-top h-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="content-top h-100 d-flex flex-column justify-content-md-start justify-content-center align-items-center">
    <img src="./phots/logo.png" width="605px" height="375px" alt="">
    <h1 class="tittle fw-bold text-center">رحلة عبر آلاف السنين من الحضارة الفرعونية</h1>
    <p class="pt-3 paragraph text-center">من فجر الأسرات إلى نهاية العصر البطلمي — استكشف الملوك والأسرات والآثار التي شكّلت أعظم حضارة في التاريخ</p>
-   <button class="btn-journey btn d-flex align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">ابدأ الرحلة
-     <i class="fa-solid fa-ankh"></i>
-   </button>
+    <a href="./Eras.html" class="btn-journey btn d-flex align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
+      ابدأ الرحلة
+       <i class="fa-solid fa-ankh"></i>
+    </a> 
    <div class="hero-scroll position-absolute d-flex justify-content-center  flex-column ">
       <div class="hero-scroll-shape border rounded-4 border-2 border-white" style="width: 25px; height: 45px;"></div>
       <div class="hero-scroll-dott position-absolute border rounded-4 border-0"></div>
