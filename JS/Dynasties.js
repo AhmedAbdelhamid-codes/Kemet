@@ -35,7 +35,7 @@ window.addEventListener("scroll", function(){
 })
 
 
-getdata("../DATA/Eras.json")
+getdata("./DATA/Eras.json")
 .then(function(data){
     console.log(data)
     let eraId = getUrlId();
