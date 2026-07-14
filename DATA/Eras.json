@@ -5,8 +5,8 @@
     "englishName": "Predynastic-Period",
     "startDate": "5500 BC",
     "endDate": "3100 BC",
-    "image": "../phots/عصر ما قبل الاسرات هيرو.webp",
-    "imageDescription" : "../phots/naqada-pottery.jpg",
+    "image": "./phots/عصر ما قبل الاسرات هيرو.webp",
+    "imageDescription" : "./phots/naqada-pottery.jpg",
     "description": "اكتشف الجذور الأولى للحضارة المصرية؛ كيف تحول الاستقرار على ضفاف النيل إلى بداية التاريخ في عصر ما قبل الأسرات",
     "fullDescription" : [
         {
@@ -36,8 +36,8 @@
     "englishName": "The Archaic Period",
     "startDate": "3100 BC",
     "endDate": "2686 BC",
-    "image": "../phots/العصر العتيق هيرو.jpg",
-    "imageDescription" : "../phots/Narmer-palette.jpg",
+    "image": "./phots/العصر العتيق هيرو.jpg",
+    "imageDescription" : "./phots/Narmer-palette.jpg",
     "description": "توحيد مصر العليا والسفلى تحت حكم الملك نارمر، وتأسيس أول الأسرات الحاكمة وإنشاء العاصمة منف وبداية فجر التاريخ المصري الموحد ",
     "fullDescription" : [
         {
@@ -67,8 +67,8 @@
     "englishName": "Old Kingdom",
     "startDate": "2686 BC",
     "endDate": "2181 BC",
-    "image": "../phots/عصر الدولة القديمه هيرو.jpg",
-    "imageDescription" : "../phots/عصر الدولة القديمه وصفpng.png",
+    "image": "./phots/عصر الدولة القديمه هيرو.jpg",
+    "imageDescription" : "./phots/عصر الدولة القديمه وصفpng.png",
     "description": "عصر بناة الأهرامات العظيمة. شهد هذا العصر ذروة السلطة الملكية وبناء أعظم المنشآت المعمارية في التاريخ.",
     "fullDescription" : [
         {
@@ -98,8 +98,8 @@
     "englishName": "The First Transitional Period",
     "startDate": "2181  BC",
     "endDate": "2055  BC",
-    "image": "../phots/العصر الانتقالي الاول هيرو.jpg",
-    "imageDescription" : "../phots/العصر الانتقالي الاول وصف.webp",
+    "image": "./phots/العصر الانتقالي الاول هيرو.jpg",
+    "imageDescription" : "./phots/العصر الانتقالي الاول وصف.webp",
     "description": "فترة من الانقسام السياسي وضعف السلطة المركزية، تنافست فيها الأسرات المحلية على السيطرة على مصر.",
     "fullDescription" : [
         {
@@ -130,8 +130,8 @@
     "englishName": "Middle Kingdom",
     "startDate": "2055 BC",
     "endDate": "1650 BC",
-    "image": "../phots/منتحتب التاني هيرو.webp",
-    "imageDescription" : "../phots/الدولة الوسطي وصف.jpg",
+    "image": "./phots/منتحتب التاني هيرو.webp",
+    "imageDescription" : "./phots/الدولة الوسطي وصف.jpg",
     "description": "عصر النهضة الثقافية والأدبية. أعاد منتوحتب الثاني توحيد مصر وازدهرت الفنون والأدب والتجارة.",
     "fullDescription" : [
       {
@@ -161,8 +161,8 @@
     "englishName": "The Second Transition Period",
     "startDate": "1650 BC",
     "endDate": "1550 BC",
-    "image": "../phots/العصر الانتقالي 2 هيرو.jpg",
-    "imageDescription" : "../phots/العصر الانتقالي 2.jpg",
+    "image": "./phots/العصر الانتقالي 2 هيرو.jpg",
+    "imageDescription" : "./phots/العصر الانتقالي 2.jpg",
     "description": "غزو الهكسوس لمصر وسيطرتهم على الدلتا، مما أدى إلى تقسيم البلاد وإدخال تقنيات حربية جديدة.",
     "fullDescription" : [
       {
@@ -192,8 +192,8 @@
     "englishName": "New Kingdom",
     "startDate": "1550 BC",
     "endDate": "1069 BC",
-    "image": "../phots/عصر الدولة الحديثة هيرو.webp",
-    "imageDescription" : "../phots/عصر الدولي الحديثه.jpg",
+    "image": "./phots/عصر الدولة الحديثة هيرو.webp",
+    "imageDescription" : "./phots/عصر الدولي الحديثه.jpg",
     "description": "العصر الذهبي لمصر الفرعونية. شهد أعظم الفراعنة وأكبر التوسعات الإمبراطورية وأروع المعابد والمقابر.",
     "fullDescription" : [
         {
@@ -223,8 +223,8 @@
     "englishName": "The Third Transition Period",
     "startDate": "1069 BC",
     "endDate": "747 BC",
-    "image": "../phots/انتقالي تالت حديثه.jpg",
-    "imageDescription" : "../phots/انتقالي تالت وصف.gif",
+    "image": "./phots/انتقالي تالت حديثه.jpg",
+    "imageDescription" : "./phots/انتقالي تالت وصف.gif",
     "description": "تفتت السلطة المركزية وحكم ملوك من أصول ليبية ونوبية، مع استمرار الحضارة المصرية في الازدهار.",
     "fullDescription" : [
       {
@@ -254,8 +254,8 @@
     "englishName": "The Late Period",
     "startDate": "747 BC",
     "endDate": "332 BC",
-    "image": "../phots/متاخر هيرو.jpg",
-    "imageDescription" : "../phots/ابسماتيك الاول المتاخر.jpg", 
+    "image": "./phots/متاخر هيرو.jpg",
+    "imageDescription" : "./phots/ابسماتيك الاول المتاخر.jpg", 
     "description": "آخر عصور الاستقلال المصري، شهد نهضة ثقافية وفنية وتأثيرات فارسية ويونانية على الحضارة المصرية.",
     "fullDescription" : [
         {
