@@ -1,7 +1,7 @@
 let x = new XMLHttpRequest();
 let btn = document.getElementById("btn")
 
-x.open("GET","../DATA/Eras.json")
+x.open("GET","./DATA/Eras.json")
 
 x.send();
 
