@@ -29,43 +29,43 @@ btn_up_body.addEventListener("click",function(){
 
 // get file json
 
-// function getdata (url){
+function getdata (url){
 
-//     return new Promise(function(resolve){
+    return new Promise(function(resolve){
 
-//         let x = new XMLHttpRequest()
-
-//         x.open("GET", url);
-
-//         x.send();
-
-//         x.addEventListener("load",function(){
-//             let data = JSON.parse(x.response)
-//             resolve(data)
-//         })
-
-//     })
-// }
-
-function getdata(url){
-
-    return new Promise(function(resolve, reject){
-
-        let x = new XMLHttpRequest();
+        let x = new XMLHttpRequest()
 
         x.open("GET", url);
 
         x.send();
 
         x.addEventListener("load",function(){
+            let data = JSON.parse(x.response)
+            resolve(data)
+        })
 
-            console.log(x.status);
-            console.log(x.response);
-
-            let data = JSON.parse(x.response);
-            resolve(data);
-
-        });
-
-    });
+    })
 }
+
+// function getdata(url){
+
+//     return new Promise(function(resolve, reject){
+
+//         let x = new XMLHttpRequest();
+
+//         x.open("GET", url);
+
+//         x.send();
+
+//         x.addEventListener("load",function(){
+
+//             console.log(x.status);
+//             console.log(x.response);
+
+//             let data = JSON.parse(x.response);
+//             resolve(data);
+
+//         });
+
+//     });
+// }

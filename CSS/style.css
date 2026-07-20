@@ -389,7 +389,7 @@ footer span{
 @keyframes navDrop {
 
     from { 
-      transform:translateY(-100%); 
+      transform:translateY(-100px); 
       opacity:0; 
     }
 
@@ -450,23 +450,23 @@ height: 100%;
 background: linear-gradient(to bottom, transparent, var(--gold-dark),transparent);
 }
 
-.right{
+.inners-period .right{
   margin-left:auto;
 }
 
-.left{
+.inners-period .left{
   margin-right:auto;
   padding-right: 5px;
 }
 
-.timeline-item{
+.inners-period .timeline-item{
  margin-block: 50px;
  width: 49%;
  transition: 0.5s;
  cursor: pointer;
 }
 
-.timeline-item .inner{
+.inners-period .timeline-item .inner{
   border: 2px solid #302611;
   border-radius: 20px;
   background: linear-gradient(135deg, var(--obsidian-light),var(--obsidian),var(--obsidian-dark));
@@ -475,11 +475,11 @@ background: linear-gradient(to bottom, transparent, var(--gold-dark),transparent
   transform: translateX(-100px);
 }
 
-.timeline-item:hover{
+.inners-period .timeline-item:hover{
   transform: scale(1.02);
 }
 
-.right.show .inner{
+.inners-period .right.show .inner{
   animation: bounceRight 0.6s 0.3s both;
 }
 
@@ -498,7 +498,7 @@ background: linear-gradient(to bottom, transparent, var(--gold-dark),transparent
   }
 }
 
-.left.show .inner{
+.inners-period .left.show .inner{
   animation: bounceLeft 0.6s 0.3s both;
 }
 
@@ -517,33 +517,33 @@ background: linear-gradient(to bottom, transparent, var(--gold-dark),transparent
   }
 }
 
-.data{
+.inners-period .data{
 top: 50%;
 transform: translateY(-50%);
 }
 
-.data-right{
+.inners-period .data-right{
 left:-162px;
 }
 
-.data-left{
+.inners-period .data-left{
 right:calc(-24% - 4px);
 }
 
-.year{
+.inners-period .year{
 color: var(--gold-dark);
 font-size: 14px;
 font-weight: 300;
 }
 
-.dott{
+.inners-period .dott{
   width:25px;
   height:25px;
   border-radius:50%;
   border: 2px solid var(--gold-dark);
 }
 
-.timeline-item.active .inner{
+.inners-period .timeline-item.active .inner{
   border: 1px solid var(--gold);
   background: linear-gradient(135deg, #b88a2e9d,var(--obsidian-light),var(--obsidian-dark));
   backdrop-filter: blur(40px);
@@ -551,11 +551,11 @@ font-weight: 300;
   box-shadow: 0px 0px 70px #c9a84c6e;
 }
 
-.timeline-item.active{
+.inners-period .timeline-item.active{
   transform: scale(1.05);
 }
 
-.timeline-item.active .dott{
+.inners-period .timeline-item.active .dott{
   border: 2px solid transparent;
 }
 
@@ -596,7 +596,7 @@ font-weight: 300;
   box-shadow: 0px 0px 50px #6A3D9A;
 }
 
-.right.show .data-right{
+.inners-period .right.show .data-right{
   animation: bouncedottright 0.6s 0.3s both;
 }
 
@@ -611,7 +611,7 @@ font-weight: 300;
   }
 }
 
-.left.show .data-left{
+.inners-period .left.show .data-left{
   animation: bouncedottleft 0.6s 0.3s both;
 }
 
@@ -627,14 +627,14 @@ font-weight: 300;
 }
 
 
-.timeline-item .card-dtails h2{
+.inners-period .timeline-item .card-dtails h2{
  font-family: "Amiri", serif;
  font-size: 22px;
  color: var(--gold);
  font-weight: 800;
 }
 
-.timeline-item .card-dtails p{
+.inners-period .timeline-item .card-dtails p{
   display: inline-block;
  font-size: 12px;
  border: 1px solid var(--papyrus-dark);
@@ -644,19 +644,19 @@ font-weight: 300;
  background-color: var(--obsidian-light);
 }
 
-.timeline-item h3{
+.inners-period .timeline-item h3{
  font-size: 14px;
  color: #8A7E68;
  line-height: 1.5;
 }
 
-.timeline-item .eras-dtails .period-stats h4{
+.inners-period .timeline-item .eras-dtails .period-stats h4{
  font-size: 12px;
  color: var(--gold-dark);
  font-weight: 400;
 }
 
-.timeline-item .eras-dtails .explore-btn{
+.inners-period .timeline-item .eras-dtails .explore-btn{
 font-size: 12px;
 color: #0D0A05;
 font-weight: 300;
@@ -672,19 +672,19 @@ font-weight: 400;
 width: 0px;
 height: 0%;
 }
-.timeline-item{
+.inners-period .timeline-item{
  margin-block: 50px;
  width: 100%;
  transition: 0.5s;
  cursor: pointer;
 }
 
-.timeline-item .inner{
+.inners-period .timeline-item .inner{
   opacity: 0;
   transform: translatey(100px);
 }
 
-.timeline-item.show .inner{
+.inners-period .timeline-item.show .inner{
  animation: bouncephone 0.6s 0.3s both;
 }
 
@@ -709,18 +709,14 @@ height: 0%;
     bottom:30px;
     left:50%;
     transform:translateX(-50%);
-
     width:320px;
     padding:18px 25px;
-
     display:flex;
     align-items:center;
     gap:15px;
-
     background:#151008;
     border:1px solid #3c2d14;
     border-radius:50px;
-
     z-index:999;
 }
 
@@ -732,63 +728,72 @@ height: 0%;
 }
 
 .progress-line{
-
     position:relative;
     flex:1;
     height:8px;
-
     background:#3d3018;
     border-radius:20px;
-
 }
 
 .progress-fill{
-
     position:absolute;
     left:0;
     top:0;
-
     width:0%;
     height:100%;
-
-    background:linear-gradient(
-        90deg,
-        #7d5b20,
-        var(--gold)
-    );
-
+    background:linear-gradient(90deg,#7d5b20,var(--gold));
     border-radius:20px;
-
 }
 
 .progress-eye{
-
     position:absolute;
-
     left:0%;
     top:50%;
-
     transform:translate(-50%,-50%);
-
     width:28px;
     height:28px;
-
     border-radius:50%;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     color:var(--papyrus);
     font-size:22px;
-
     transition:left .15s linear;
 }
 
-
-
-
 /* dynasties page */
+
+.page-tittle::after{
+  position: absolute;
+  content: "";
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 30%;
+  background-color: transparent;
+  background: linear-gradient(to left,transparent,#c9a84c86,transparent);
+}
+
+.page-tittle span{
+ font-size: 14px;
+ color: var(--gold);
+}
+
+.page-tittle .tittle{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Amiri", serif;
+  color: var(--papyrus-light);
+}
+
+.page-tittle .paragraph{
+  font-size: 18px;
+  color: var(--gold);
+  
+}
+
+/* hero */
 
 .hero-Dynasties{
   background-position: center;
@@ -838,50 +843,17 @@ width: 100%;
 /* =========description-Dynasties========== */
 @keyframes id {
   from{
-    transform: translateY(900px);
+    transform: translateY(700px);
     opacity: 1;
   }
   to{
-    transform: translateY(-300px);
+    transform: translateY(-700px);
     opacity: 0;
   }
 }
 
 .description-Dynasties{
 background-color: #1A1209;
-}
-
-.description-Dynasties span{
-  color: var(--gold);
-  font-size: 14px;
-  transform: translate(30px);
-  opacity: 0;
-}
-
-.description-Dynasties .tittle{
-font-size:clamp(50px,4vw,50px);
-color: var(--papyrus);
-font-family: "Amiri", serif;
-line-height: 1;
- transform: translate(30px);
-  opacity: 0;
-}
-
-.description-Dynasties .paragraph{
-font-size:16px;
-color: var(--gold);
-line-height: 1;
- transform: translate(30px);
-  opacity: 0;
-}
-
-.description-Dynasties .decorative-line{
-display: block;
-color: #b88a2e7e;
-font-size: 25px;
-letter-spacing: 5px;
- transform: translate(30px);
-  opacity: 0;
 }
 
 .description .imge::after{
@@ -913,7 +885,21 @@ letter-spacing: 5px;
   opacity: 0;
 }
 
-.description-content .show{
+.description .imge{
+  width: 600px; 
+  height: 400px;
+  flex-shrink: 1;
+}
+
+@media (max-width: 992px) {
+  .description .imge {
+    width: 100%;
+    height: 50%;
+    flex-shrink: 0;
+  }
+}
+
+.description-content .descriptionshow{
    transform: translate(30px);
   opacity: 0;
 }
@@ -942,6 +928,351 @@ font-size: 14px;
 line-height: 2;
 font-weight: 500;
 }
+
+/* Dynasties sec */
+
+.Dynasties-cards::before{
+content: "";
+position: absolute;
+right: 50%;
+transform: translateX(-50%);
+width: 1px;
+height: 100%;
+background: linear-gradient(to bottom, transparent, var(--gold-dark),transparent);
+}
+
+.Dynasties-cards {
+  margin-top: 100px;
+}
+
+.Dynasties-cards .right{
+  margin-left:auto;
+  /* padding-right: 20px; */
+}
+
+.Dynasties-cards .left{
+  margin-right:auto;
+  padding-right: 5px;
+}
+
+.Dynasties-cards .timeline-item{
+ margin-bottom: 50px;
+ width: 41%;
+ transition: 0.5s;
+ cursor: pointer; 
+ transform: translateY(30px);
+ opacity: 0;
+}
+
+.Dynasties-cards .timeline-item .inner{
+  border: 1px solid #c9a84c41;
+  border-radius: 20px;
+  background-color: var(--obsidian-light);
+  transition: 0.5s;
+}
+
+.Dynasties-cards .timeline-item  .inner:hover {
+  transform: scale(1.02) translateY(-3px);
+  box-shadow: 0px 0px 70px #c9a84c74 ;
+  border-color: var(--gold);
+}
+
+.Dynasties-cards .data{
+top: 10%;
+transform: translateY(-10%);
+}
+
+.Dynasties-cards .data-right{
+left: -244px;
+transform: translatex(244);
+}
+
+.Dynasties-cards .data-left{
+right:-122px;
+transform: translatex(122);
+}
+
+.Dynasties-cards .data .dott{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  transition: 0.3s 0.2s;
+}
+
+.Dynasties .timeline-item .predynastic{
+  background:#8B5E3C;
+  box-shadow: 0px 0px 50px #8B5E3C;
+}
+
+.Dynasties .timeline-item .Archaic{
+  background:#C47A3A;
+  box-shadow: 0px 0px 50px #C47A3A;
+}
+
+.Dynasties .timeline-item .old{
+  background:#E3B341;
+  box-shadow: 0px 0px 50px #E3B341;
+}
+
+.Dynasties .timeline-item .FirstTransitional{
+  background:#7A6A58;
+  box-shadow: 0px 0px 50px #7A6A58;
+}
+
+.Dynasties .timeline-item .middle{
+  background:#2E8B57;
+  box-shadow: 0px 0px 50px #2E8B57;
+}
+
+.Dynasties .timeline-item .SecondTransition{
+  background:#9B3A2E;
+  box-shadow: 0px 0px 50px #9B3A2E;
+}
+
+.Dynasties .timeline-item .new{
+  background:#1E4D8F;
+  box-shadow: 0px 0px 50px #1E4D8F;
+}
+
+.Dynasties .timeline-item .ThirdTransition{
+  background:#5E4B6E;
+  box-shadow: 0px 0px 50px #5E4B6E;
+}
+
+.Dynasties .timeline-item .LatePeriod{
+  background:#6A3D9A;
+  box-shadow: 0px 0px 50px #6A3D9A;
+}
+
+.card-content{
+  padding: 30px 25px;
+}
+
+.Dynasties-cards .year span{
+   color:var(--gold-light);
+  font-size: 14px;
+}
+
+.Dynasties-cards .liten_num{
+   font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  color: #42341D;
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.Dynasties-cards .timeline-item h2{
+ font-family: "Amiri", serif;
+ font-size: 30px;
+ color: var(--gold);
+ font-weight: 800;
+}
+
+.Dynasties-cards .kings .king{
+ padding: 2px 10px;
+ border: 1px solid var(--gold-dark);
+ font-size: 12px;
+ color: var(--gold-light);
+ background-color: #372A19;
+ border-radius: 20px;
+ text-align: center;
+}
+
+.Dynasties-cards .kings .kings-count{
+ font-size: 12px;
+ color: var(--gold-dark);
+}
+
+.Dynasties-cards .timeline-item p{
+ display: inline-block;
+ font-size: 12px;
+ color: var(--gold-dark);
+ border-radius: 20px; 
+ background-color: var(--obsidian-light);
+}
+
+.Dynasties-cards .timeline-item h3{
+ font-size: 14px;
+ color:  var(--gold-light);
+ line-height: 2;
+ margin-bottom: 20px;
+}
+
+.Dynasties-cards .timeline-item .explore-btn{
+font-size: 14px;
+color: #0D0A05;
+font-weight: 300;
+padding: 5px 10px;
+background-color: var(--sand);
+border-radius: 20px;
+font-weight: 600;
+transition: var(--trans);
+}
+
+.Dynasties-cards .timeline-item .explore-btn:hover{
+  transform: translateY(-3px);
+}
+
+.Dynasties-cards .timeline-item .icon{
+  transition: var(--trans);
+}
+
+.Dynasties-cards .timeline-item .explore-btn:hover .icon{
+transform: translateX(-3px);
+}
+
+.Dynasties-cards .nothig{
+  padding: 5px 10px;
+  border: 1px solid #c9a84c41;
+  border-radius: 25px;
+  background-color: var(--obsidian-light) ;
+  color: rgb(216, 105, 30);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.Dynasties-cards .capital{
+  color:var(--gold-light);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+.Dynasties-cards::before{
+width: 0px;
+height: 0%;
+}
+.Dynasties-cards .timeline-item{
+ margin-block: 50px;
+ width: 100%;
+ transition: 0.5s;
+ cursor: pointer;
+}
+}
+
+/* Antiquities sec */
+
+
+.Antiquities{
+  background-color: #1A1209;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.gallery .item{ 
+  z-index: 999;
+  cursor: pointer;
+}
+
+.square{
+  grid-column:span 1;
+  grid-row:span 1;
+}
+
+.tall{
+  grid-row:span 2;
+}
+
+.wide{
+  grid-column:span 2;
+  grid-row:span 1;
+}
+
+.big{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.Antiquities .gallery .overlay{
+  inset: 0;
+  background: linear-gradient(to bottom,transparent,rgba(0, 0, 0, 0.538) 70%);
+  transition: 0.7s;
+
+  ul .Antiquities-name{
+    font-family: "Amiri", serif;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--trans);
+  }
+
+  ul .details{
+    color: var(--gold);
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-weight: 300;
+    transition: var(--trans);
+  }
+}
+
+.Antiquities .gallery .imge:hover img{
+transform: scale(1.1);
+}
+
+.Antiquities .gallery .imge:hover .overlay{
+    
+  ul .Antiquities-name{
+    bottom: 35px;
+  }
+
+  ul .details{
+    bottom: 15px;
+  }
+}
+
+.Antiquities .gallery img{
+  transition: 0.8s;
+}
+
+.AntiquitiesShow{
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.timelineShow{
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.descriptionshow{
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.Antiquities .explore-btn{
+padding: 15px 20px;
+font-size: 20px;
+border: 1px solid #c9a84c41 ;
+border-radius: 40px;
+width: 20%;
+margin: auto;
+color: var(--papyrus);
+transition: var(--trans);
+}
+
+.Antiquities .explore-btn:hover{
+transform: translateY(-3px);
+background-color: var(--gold-dark);
+}
+
+.Antiquities .explore-btn .icon{
+transform: translateX(-3px);
+}
+
+.Antiquities .explore-btn:hover .icon{
+transform: translateX(-3px);
+}
+
+
+
 
 
 

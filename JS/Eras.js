@@ -95,7 +95,7 @@ x.addEventListener("load",function(){
 
     let items = document.querySelectorAll(".timeline-item")
 
-let observer2 = new IntersectionObserver(function(entries){
+  let observer = new IntersectionObserver(function(entries){
 
       console.log(entries)
     
@@ -115,7 +115,7 @@ let observer2 = new IntersectionObserver(function(entries){
 
 
 items.forEach(function(card){
-    observer2.observe(card)
+    observer.observe(card)
 });
 
  let timeline_items = document.querySelectorAll(".timeline-item")
