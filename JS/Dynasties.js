@@ -22,28 +22,17 @@
 
 })();
 
-let navbar = document.getElementById("my-nav");
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 100){
-        navbar.classList.add("show")
-    }else{
-        navbar.classList.remove("show")
-    }
-
-})
-
-
 Promise.all([
     getdata("./DATA/Eras.json"),
     getdata("./DATA/Dynasties.json")
 ])
 .then(function ([erasData, DynastiesData]) {
-    // console.log(erasData);
-    // console.log(DynastiesData);
+  
 
-    let eraId = getUrlId();
+    let params = getUrlId();
+
+   let eraId = params.get("era-id");
+
     let era = erasData.find(function(item){
       return item.id == eraId;
      });
@@ -51,6 +40,7 @@ Promise.all([
      let Dynasties = DynastiesData.filter(function(dynasty){
         return era.dynasties.includes(dynasty.id)
      })
+
      console.log(era)
      console.log(Dynasties)
 
@@ -167,7 +157,7 @@ Promise.all([
               <div class="inner position-relative border-opacity-25">
                    <div class="card-content d-flex flex-column gap-0 justify-content-between align-items-start">
                      <div class="year position-relative w-100 h-100">
-                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} - ${Dynasties[i].endDate}</span>
+                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} BC - ${Dynasties[i].endDate} BC</span>
                      </div>
                      <span class="liten_num m-0 p-0">${Dynasties[i].number}</span>
                      <h2 class="mb-3">${Dynasties[i].name}</h2>
@@ -177,9 +167,9 @@ Promise.all([
                          <li class="king">${Dynasties[i].featuredKings[2]}</li>
                          <li class="kings-count">${Dynasties[i].kings.length} ملوك</li>
                         </ul>
-                       <h3>${Dynasties[i].description}</h3>
+                       <h3>${Dynasties[i].description_card}</h3>
                          <div class="footer w-100 d-flex justify-content-between align-items-center">
-                           <a href="" class="link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-2 align-items-center ">
+                           <a href="./Dynasty.html?dynasty-id=${Dynasties[i].id}" class="link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-2 align-items-center ">
                            استكشف الاسرة
                             <i class="fa-solid fa-arrow-left icon"></i>
                            </a>
@@ -199,7 +189,7 @@ Promise.all([
              <div class="inner position-relative border-opacity-25">
                    <div class="card-content d-flex flex-column gap-0 justify-content-between align-items-start">
                      <div class="year position-relative w-100 h-100">
-                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} - ${Dynasties[i].endDate}</span>
+                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} BC - ${Dynasties[i].endDate} BC</span>
                      </div>
                      <span class="liten_num m-0 p-0">${Dynasties[i].number}</span>
                      <h2 class="mb-3">${Dynasties[i].name}</h2>
@@ -230,7 +220,7 @@ Promise.all([
                   <div class="inner position-relative border-opacity-25">
                      <div class="card-content d-flex flex-column gap-0 justify-content-between align-items-start">
                      <div class="year position-relative w-100 h-100">
-                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} - ${Dynasties[i].endDate}</span>
+                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} BC - ${Dynasties[i].endDate} BC</span>
                      </div>
                      <span class="liten_num m-0 p-0">${Dynasties[i].number}</span>
                      <h2 class="mb-3">${Dynasties[i].name}</h2>
@@ -240,9 +230,9 @@ Promise.all([
                          <li class="king">${Dynasties[i].featuredKings[2]}</li>
                          <li class="kings-count">${Dynasties[i].kings.length} ملوك</li>
                         </ul>
-                       <h3>${Dynasties[i].description}</h3>
+                       <h3>${Dynasties[i].description_card}</h3>
                          <div class="footer w-100 d-flex justify-content-between align-items-center">
-                           <a href="" class="link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-2 align-items-center ">
+                           <a href="./Dynasty.html?dynasty-id=${Dynasties[i].id}" class="link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-2 align-items-center ">
                            استكشف الاسرة
                             <i class="fa-solid fa-arrow-left icon"></i>
                            </a>
@@ -262,7 +252,7 @@ Promise.all([
              <div class="inner position-relative border-opacity-25">
                    <div class="card-content d-flex flex-column gap-0 justify-content-between align-items-start">
                      <div class="year position-relative w-100 h-100">
-                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} - ${Dynasties[i].endDate}</span>
+                         <span class="position-absolute top-0 end-0" dir="ltr">${Dynasties[i].startDate} BC - ${Dynasties[i].endDate} BC</span>
                      </div>
                      <span class="liten_num m-0 p-0">${Dynasties[i].number}</span>
                      <h2 class="mb-3">${Dynasties[i].name}</h2>
@@ -283,7 +273,40 @@ Promise.all([
         } 
 
         cards.innerHTML= cartona
-  
+
+        let gallery = document.querySelector(".gallery")
+        let Antiquities_tittle = document.querySelector(".Antiquities-tittle")
+        let cartonaa ="";
+
+        Antiquities_tittle.innerHTML = `
+          <span class="mb-2">العمارة والإرث</span>
+         <h2 class="tittle">آثار ${era.name}</h2>
+         <p class="paragraph">بُنيت لتتحدى الأبدية — وقد فعلت.</p>
+        `
+
+        for(let i = 0; i < era.eraPhotos.length; i++){
+            cartonaa += `
+             <div class="item ${era.eraPhotos[i].shap} rounded-4 AntiquitiesShow">
+            <div class="imge position-relative w-100 h-100 overflow-hidden rounded-4">
+             <img src="${era.eraPhotos[i].photo}" class="z-3 w-100 h-100 object-fit-cover rounded-4">
+             <div class="overlay z-2 position-absolute">
+                <ul class="list-unstyled z-1">
+                    <li class="Antiquities-name">${era.eraPhotos[i].name}</li>
+                    <li class="details d-flex justify-content-center align-content-start gap-1">
+                        <span>${era.eraPhotos[i].location}</span>
+                        <span>.</span>
+                        <span>${era.eraPhotos[i].Dynasty}</span>
+                    </li>
+                </ul>
+             </div>
+            </div>
+          </div>
+            `
+        }
+
+        gallery.innerHTML = cartonaa
+
+         
        let descriptions = document.querySelectorAll(".descriptionshow")
        let timelines = document.querySelectorAll(".timelineShow")
        let items = document.querySelectorAll(".AntiquitiesShow")

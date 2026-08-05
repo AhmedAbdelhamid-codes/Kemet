@@ -37,7 +37,7 @@ x.addEventListener("load",function(){
                           <h4>${eras[i].dynasties.length} اسرة حاكمة</h4>
                           <h4>${eras[i].kings} ملوك</h4>
                         </div>
-                        <a href="./Dynasties.html?id=${eras[i].id}" class="link-underline link-underline-opacity-0 explore-btn text-center d-flex gap-2 align-items-center ">
+                        <a href="./Dynasties.html?era-id=${eras[i].id}" class="link-underline link-underline-opacity-0 explore-btn text-center d-flex gap-2 align-items-center ">
                           استكشف الأسرات
                            <i class="fa-solid fa-arrow-left icon"></i>
                         </a>
@@ -69,7 +69,7 @@ x.addEventListener("load",function(){
                           <h4>${eras[i].dynasties.length} اسرة حاكمة</h4>
                           <h4>${eras[i].kings} ملوك</h4>
                         </div>
-                        <a href="./Dynasties.html?id=${eras[i].id}" class="link-underline link-underline-opacity-0 explore-btn text-center d-flex gap-2 align-items-center">
+                        <a href="./Dynasties.html?era-id=${eras[i].id}" class="link-underline link-underline-opacity-0 explore-btn text-center d-flex gap-2 align-items-center">
                           استكشف الأسرات
                            <i class="fa-solid fa-arrow-left icon"></i>
                         </a>

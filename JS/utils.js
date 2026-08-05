@@ -1,10 +1,6 @@
 // ids from url
 function getUrlId(){
-
-    const params = new URLSearchParams(location.search);
-
-    return params.get("id");
-
+    return new URLSearchParams(location.search)
 }
 
 // ============up to top for body=========== //

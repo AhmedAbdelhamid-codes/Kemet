@@ -799,7 +799,6 @@ height: 0%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   border-bottom: 1px solid var(--gold);
 }
 
@@ -1137,7 +1136,7 @@ transform: translateX(-3px);
   font-weight: 300;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 993px) {
 .Dynasties-cards::before{
 width: 0px;
 height: 0%;
@@ -1147,6 +1146,11 @@ height: 0%;
  width: 100%;
  transition: 0.5s;
  cursor: pointer;
+}
+
+.Dynasties-cards .data .dott{
+  width:0px;
+  height:0px;
 }
 }
 
@@ -1195,9 +1199,10 @@ height: 0%;
   ul .Antiquities-name{
     font-family: "Amiri", serif;
     color: white;
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: clamp(12px,3vw,24px);
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     right: 20px;
     transition: var(--trans);
   }
@@ -1205,6 +1210,7 @@ height: 0%;
   ul .details{
     color: var(--gold);
     font-size: 14px;
+    font-size: clamp(10px,3vw,14px);
     position: absolute;
     bottom: 10px;
     left: 20px;
@@ -1249,10 +1255,11 @@ transform: scale(1.1);
 
 .Antiquities .explore-btn{
 padding: 15px 20px;
-font-size: 20px;
+font-size: clamp(12px,2vw,18px);
 border: 1px solid #c9a84c41 ;
 border-radius: 40px;
-width: 20%;
+width:  50vw;
+max-width: 250px;
 margin: auto;
 color: var(--papyrus);
 transition: var(--trans);
@@ -1264,12 +1271,190 @@ background-color: var(--gold-dark);
 }
 
 .Antiquities .explore-btn .icon{
-transform: translateX(-3px);
+transition: var(--trans);
 }
 
 .Antiquities .explore-btn:hover .icon{
 transform: translateX(-3px);
 }
+
+@media (max-width : 992px) {
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+}
+
+@media (max-width : 768px) {
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  gap:20px;
+}
+
+.tall{
+  grid-row:span 1;
+  grid-column: span 1;
+}
+}
+
+/* Dynasty page */
+/* herp sec */
+.hero-Dynasty{
+  height: 85vh;
+  background-color: #1a1209;
+}
+
+.hero-Dynasty .hero-content h4{
+color: var(--gold);
+font-size: 14px;
+font-weight: 300;
+letter-spacing: 2px;
+position: relative;
+animation:fadeUp 1s 0.2s ease both;
+}
+
+.hero-Dynasty .hero-content h4::after,
+.hero-Dynasty .hero-content h4::before
+{
+content: "";
+position: absolute;
+width: 40%;
+height: 1px;
+background-color: var(--gold);
+top: 55%;
+
+}
+
+.hero-Dynasty .hero-content h4::after{
+right: -55px;
+}
+
+.hero-Dynasty .hero-content h4::before{
+left: -55px;
+}
+
+.hero-Dynasty .hero-content span{
+  font-size: 16px;
+  color: #c9a84c53;
+  letter-spacing: 4px;
+  animation:fadeUp 1s 0.3s ease both;
+}
+
+.hero-Dynasty .hero-content h1{
+  font-size: clamp(35px,8vw,150px);
+  color: var(--papyrus-light);
+  font-family: "Amiri", serif;
+  animation:fadeUp 1s 0.4s ease both;
+}
+
+.hero-Dynasty .hero-content ul{
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--sand-light);
+  animation:fadeUp 1s 0.5s ease both;
+}
+
+/* details sec */
+
+.details-Dynasty .row{
+  border: 1px solid #362B12;
+  border-inline-width: 0px;
+}
+
+.details-Dynasty .tittle{
+  color: #e8d5a369;
+  font-family: "Amiri", serif;
+  font-weight: 500;
+}
+
+.details-Dynasty .paragraph{
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.details-Dynasty .space{
+  position: relative;
+}
+
+.details-Dynasty .space::before{
+content: "";
+position: absolute;
+left: -5%;
+transform: translateX(5%);
+width: 1px;
+height: 100%;
+background-color: #c9a84c4e;
+}
+
+@media (max-width : 768px) {
+.details-Dynasty .DURATION::before{
+content: none;
+}
+}
+
+/* description section */
+
+.description-section{
+  height: 90vh;
+}
+
+.description-section .description-tittle{
+  font-size: 22px;
+  color: var(--gold);
+  font-family: "Amiri", serif;
+  font-weight: bold;
+}
+
+.description-section .description-Dynasty p{
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--papyrus-light);
+  line-height: 2;
+}
+
+.description-section .Achievements-tittle{
+  font-size: 22px;
+  color: var(--gold);
+  font-family: "Amiri", serif;
+  font-weight: bold;
+}
+
+.description-section .Achievements .Achievement::before{
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 100%;
+  transform: translateY(100%);
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--gold-light);
+  border-radius: 50%;
+}
+
+.description-section .Achievements h3{
+  font-size: 14px;
+  color: var(--papyrus-light);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.description-section .Achievements p{
+  font-size: 12px;
+  color: #e8d5a36a;
+  font-weight: 500;
+  line-height: 2;
+}
+
+
+
+
+
+
+
+
 
 
 

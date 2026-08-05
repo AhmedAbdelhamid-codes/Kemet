@@ -23,7 +23,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-
+      <!-- for liten number -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body class="eras-page_body">
 
@@ -34,10 +37,12 @@
   <i class="fa-solid fa-arrow-up position-absolute icon2"></i>
 </button>
 
-<header class="pt-5">
-<div class="container">
+    
+<svg id="egypt-bg" class="z-1"></svg>
+
+<header class="">
  <nav class="my-nav navbar-expand-lg z-3 position-absolute top-0 end-0 start-0" id="my-nav">
-     <div class="container mt-sm-0 d-flex justify-content-sm-between justify-content-center align-items-center flex-wrap">
+     <div class="container mt-sm-0 mt-3 d-flex justify-content-sm-between justify-content-center align-items-center flex-wrap">
        <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center gap-3">
         <li>
             <a href="./index.html" title="HOME" class="link link-underline-opacity-0 fs-5">
@@ -50,40 +55,48 @@
         <li>
             <a href="./Eras.html" title="ERAS" class="eras-link link-underline link-underline-opacity-0">العصور التاريخية</a>
         </li>
+         <li class="fs-6">
+            >
+        </li>
+        <li id="linkEra">
+        </li>
+        <li class="fs-6">
+            >
+        </li>
+        <li id="linkDynasty">
+        </li>
     </ul>
      <a href="./index.html" title="HOME"><img src="./phots/logo.png" alt="" width="200px" height="100px"></a>
      </div>
     </nav>
- <div class="main-Page_tittle text-center mt-5">
-    <span class="decorative-line mb-3 line-1">𓇳 𓋹 𓏏</span>
-    <h1 class="eras-tittle fw-bold">الخط الزمني للحضارة الفرعونية</h1>
-    <p class="eras-paragraph my-4">رحلة عبر 6٠٠٠ سنة من التاريخ المصري — من فجر الحضارة إلى نهاية العصر المتأخر</p>
-    <span class="decorative-line line-2">—— 𓆸 𓇳 𓆸 ——</span>
- </div>
-</div>
 </header>
 
-<main class="py-4 mt-1">
-<section>
- <div class="container">
-   <div class="inners-period position-relative" id="cards">
-       
-        
-       
-    
- </div>
- <div class="timeline-progress">
-    <span class="start-year">332 ق.م</span>
-
-    <div class="progress-line">
-        <div class="progress-fill"></div>
-        <div class="progress-eye">
-            𓂀
-        </div>
+<main class="">
+<section class="hero-Dynasty position-relative">
+ <div class="container h-100">
+    <div class="hero-content h-100 d-flex justify-content-center align-items-center flex-column gap-2">
+     
     </div>
-
-    <span class="current-year">5000 ق.م</span>
+    <div class="hero-scroll position-absolute d-flex justify-content-center  flex-column ">
+      <div class="hero-scroll-shape border rounded-4 border-2 border-white" style="width: 25px; height: 45px;"></div>
+      <div class="hero-scroll-dott position-absolute border rounded-4 border-0"></div>
+    </div>
 </div>
+</section>
+
+<section class="details-Dynasty h-100 pb-3">
+ <div class="container">
+   <div class="row details-row justify-content-center text-center gap-sm-4 gap-5 p-sm-3 p-2" style="color: #1a1209 ;">
+
+   </div>
+ </div>
+</section>
+
+<section class="description-section py-5">
+<div class="container">
+    <div class="row description-row justify-content-center gap-5">
+        
+    </div>
 </div>
 </section>
 </main>
@@ -100,6 +113,6 @@
 
 <script src="./JS/bootstrap.bundle.min.js"></script>
 <script src="./JS/utils.js"></script>
-<script src="./JS/Eras.js"></script>    
+<script src="./JS/Dynasty.js"></script>    
 </body>
 </html>
