@@ -24,9 +24,10 @@
 
 Promise.all([ 
     getdata("./DATA/Eras.json"),
-    getdata("./DATA/Dynasties.json")
+    getdata("./DATA/Dynasties.json"),
+    getdata("./DATA/kings.json")
 ])
-.then(function ([erasData, DynastiesData]){
+.then(function ([erasData, DynastiesData, kingsaData]){
 
     let params = getUrlId();
 
@@ -41,8 +42,13 @@ Promise.all([
     let era = erasData.find(function(era){
         return era.id == Dynasty.eraId
     })
+
+    let kings = kingsaData.filter(function(king){
+        return Dynasty.kings.includes(king.id)
+    })
    
     console.log(Dynasty)
+    console.log(kings)
 
     document.getElementById("linkEra").innerHTML= `
      <a href="./Dynasties.html?era-id=${era.id}" title="${era.name}" class="eras-link link-underline link-underline-opacity-0">${era.name}</a>
@@ -130,20 +136,94 @@ Promise.all([
             </div>
         </div>
     `
+
+    let kings_cards = document.getElementById("cards")
+
+     let cards = ""
+     for(let i = 0; i < kings.length; i++){
+        
+        if(kings[i].featured) {
+             cards+= `
+              <div class="col item">
+                <div class="card">
+                <img src="${kings[i].image}" class="card-img-top" alt="${kings[i].name}">
+                <div class="card-body d-flex flex-column">
+               <div class="dtails d-flex justify-content-between align-items-center flex-wrap">
+                 <span>0${i}</span>
+                 <span>${kings[i].startDate - kings[i].endDate} عام</span>
+              </div>
+              <h5 class="card-title mb-2 d-flex justify-content-start align-items-center gap-1">${kings[i].name} 
+                <i class="fa-solid fa-star star"></i>
+              </h5>
+            <h6 class="card-subtitle mb-3 ">${kings[i].title}</h6>
+            <h6 class="card-history mb-4 ">${kings[i].startDate} – ${kings[i].endDate} BCE</h6>
+            <p class="card-text">${kings[i].Description[0]}</p>
+             <a href="" class="explore-btn d-flex justify-content-center align-items-center gap-2">استكشف الملك 
+              <i class="fa-solid fa-arrow-left icon"></i>
+             </a>
+           </div>
+         </div>
+       </div>
+             `
+        }else{
+            cards+= `
+                   <div class="col item">
+    <div class="card">
+      <img src="${kings[i].image}" class="card-img-top" alt="${kings[i].name}">
+      <div class="card-body d-flex flex-column">
+        <div class="dtails d-flex justify-content-between align-items-center flex-wrap">
+            <span>0${i}</span>
+            <span>${kings[i].startDate - kings[i].endDate} عام</span>
+        </div>
+        <h5 class="card-title mb-2">${kings[i].name}</h5>
+        <h6 class="card-subtitle mb-3">${kings[i].title}</h6>
+        <h6 class="card-history mb-4 ">${kings[i].startDate} – ${kings[i].endDate} BCE</h6>
+        <p class="card-text">${kings[i].Overview}</p>
+        <span href="" class="note d-flex justify-content-center align-items-center gap-2">
+          ⚠️ معلومات تاريخية محدودة 
+        </span>
+      </div>
+    </div>
+  </div>
+            `
+        }
+     }
+
+    kings_cards.innerHTML = cards
+
+
+
     
+
 let counter = document.querySelector(".counter");
+let items = document.querySelectorAll(".item")
+
 
 let observer = new IntersectionObserver(function(entries){
 
-    if(entries[0].isIntersecting){
+    entries.forEach(function(entry){
+     if(entry.isIntersecting){
 
         startCounter();
 
-    }
+        if(entry.target.classList.contains("item")){
+            let index = Array.from(items).indexOf(entry.target)
+            entry.target.style.animation = `fadeUp 0.5s ${(index + 1) * 0.1}s ease both`
+        }
 
+      }
+
+    })
+    
 });
 
+items.forEach(function(item){
+    observer.observe(item)
+})
+
 observer.observe(counter);
+
+
 
 function startCounter(){
 

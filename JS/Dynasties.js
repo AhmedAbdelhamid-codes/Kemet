@@ -24,25 +24,26 @@
 
 Promise.all([
     getdata("./DATA/Eras.json"),
-    getdata("./DATA/Dynasties.json")
+    getdata("./DATA/Dynasties.json"),
+    getdata("./DATA/kings.json")
 ])
-.then(function ([erasData, DynastiesData]) {
+.then(function ([erasData, DynastiesData, kingsaData]) {
   
 
-    let params = getUrlId();
+  let params = getUrlId();
 
-   let eraId = params.get("era-id");
+  let eraId = params.get("era-id");
 
-    let era = erasData.find(function(item){
+  let era = erasData.find(function(item){
       return item.id == eraId;
-     });
+    });
 
-     let Dynasties = DynastiesData.filter(function(dynasty){
-        return era.dynasties.includes(dynasty.id)
-     })
+  let Dynasties = DynastiesData.filter(function(dynasty){
+      return era.dynasties.includes(dynasty.id)
+    })
 
-     console.log(era)
-     console.log(Dynasties)
+    console.log(era)
+    console.log(Dynasties)
 
     document.getElementById("linkEra").innerHTML = `
     <a href="./Dynasties.html?id=${era.id}" title="${era.name}" class="eras-link link-underline link-underline-opacity-0">${era.name}</a>
@@ -162,9 +163,18 @@ Promise.all([
                      <span class="liten_num m-0 p-0">${Dynasties[i].number}</span>
                      <h2 class="mb-3">${Dynasties[i].name}</h2>
                         <ul class="mb-3 kings list-unstyled d-flex justify-content-center align-items-center gap-2 mb-2 flex-wrap">
-                         <li class="king">${Dynasties[i].featuredKings[0]}</li>
-                         <li class="king">${Dynasties[i].featuredKings[1]}</li>
-                         <li class="king">${Dynasties[i].featuredKings[2]}</li>
+                        <li class="king">${
+                          kingsaData.find(function(king){
+                           return Dynasties[i].featuredKing[0].includes(king.id)
+                            }).name}</li>
+                         <li class="king">${
+                           kingsaData.find(function(king){
+                           return Dynasties[i].featuredKing[1].includes(king.id)
+                            }).name}</li>
+                         <li class="king">${
+                           kingsaData.find(function(king){
+                           return Dynasties[i].featuredKing[2].includes(king.id)
+                            }).name}</li>
                          <li class="kings-count">${Dynasties[i].kings.length} ملوك</li>
                         </ul>
                        <h3>${Dynasties[i].description_card}</h3>
@@ -225,9 +235,18 @@ Promise.all([
                      <span class="liten_num m-0 p-0">${Dynasties[i].number}</span>
                      <h2 class="mb-3">${Dynasties[i].name}</h2>
                         <ul class="mb-3 kings list-unstyled d-flex justify-content-center align-items-center gap-2 mb-2 flex-wrap">
-                         <li class="king">${Dynasties[i].featuredKings[0]}</li>
-                         <li class="king">${Dynasties[i].featuredKings[1]}</li>
-                         <li class="king">${Dynasties[i].featuredKings[2]}</li>
+                         <li class="king">${
+                          kingsaData.find(function(king){
+                           return Dynasties[i].featuredKing[0].includes(king.id)
+                            }).name}</li>
+                         <li class="king">${
+                           kingsaData.find(function(king){
+                           return Dynasties[i].featuredKing[1].includes(king.id)
+                            }).name}</li>
+                         <li class="king">${
+                           kingsaData.find(function(king){
+                           return Dynasties[i].featuredKing[2].includes(king.id)
+                            }).name}</li>
                          <li class="kings-count">${Dynasties[i].kings.length} ملوك</li>
                         </ul>
                        <h3>${Dynasties[i].description_card}</h3>
@@ -328,7 +347,7 @@ Promise.all([
 
 
               if(entry.target.classList.contains("AntiquitiesShow")){
-                 let index = Array.from(timelines).indexOf(entry.target)
+                 let index = Array.from(items).indexOf(entry.target)
                 entry.target.style.animation = `fadeUp 0.5s ${(index + 1) * 0.1}s ease both`
               }
             }
