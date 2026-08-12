@@ -149,7 +149,7 @@ Promise.all([
                 <img src="${kings[i].image}" class="card-img-top" alt="${kings[i].name}">
                 <div class="card-body d-flex flex-column">
                <div class="dtails d-flex justify-content-between align-items-center flex-wrap">
-                 <span>0${i}</span>
+                 <span>0${i + 1}</span>
                  <span>${kings[i].startDate - kings[i].endDate} عام</span>
               </div>
               <h5 class="card-title mb-2 d-flex justify-content-start align-items-center gap-1">${kings[i].name} 
@@ -172,7 +172,7 @@ Promise.all([
       <img src="${kings[i].image}" class="card-img-top" alt="${kings[i].name}">
       <div class="card-body d-flex flex-column">
         <div class="dtails d-flex justify-content-between align-items-center flex-wrap">
-            <span>0${i}</span>
+            <span>0${i+1}</span>
             <span>${kings[i].startDate - kings[i].endDate} عام</span>
         </div>
         <h5 class="card-title mb-2">${kings[i].name}</h5>
