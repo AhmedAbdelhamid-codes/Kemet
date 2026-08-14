@@ -38,7 +38,7 @@
   "themeColor": "predynastic",
   "kings": ["0001","0002","0003","0004","0005","0101"],
   "featuredKing": ["0003","0004","0005"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "عدة مراكز رئيسية في الصعيد",
   "hasPage":true
 },
@@ -82,7 +82,7 @@
   "kings": ["0101", "0102", "0103", "0104", "0105", "0106", "0107", "0108"],
   "featuredKing": ["0101","0102","0103"],
   "featuredKings": ["نارمر ","حور عحا","خنت"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "منف",
   "hasPage":true
 },
@@ -126,7 +126,7 @@
   "kings": ["0201", "0202", "0203", "0204", "0205", "0206", "0207"],
   "featuredKing": ["0202","0205","0207"],
   "featuredKings": ["ني نتجر","بر إيب سن","خع سخموي"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "منف",
   "hasPage":true
 },
@@ -170,7 +170,7 @@
   "kings": ["0301", "0302", "0303", "0304", "0305"],
   "featuredKing": ["0302","0303","0305"],
   "featuredKings": ["زوسر", "سخم خت", "حوني"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "منف",
   "hasPage":true
 },
@@ -214,7 +214,7 @@
   "kings": ["0401", "0402", "0403", "0404", "0405", "0406", "0407", "0408"],
   "featuredKing": ["0401","0402","0404"],
   "featuredKings": ["سنفرو", "خوفو", "خفرع"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "منف",
   "hasPage":true
 },
@@ -258,7 +258,7 @@
   "kings": ["0501", "0502", "0503", "0504", "0405", "0506", "0507", "0508", "0509"],
   "featuredKing": ["0501","0502","0509"],
   "featuredKings": ["أوسركاف", "ساحورع", "أوناس"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "منف",
   "hasPage":true
 },
@@ -302,7 +302,7 @@
   "kings": ["0601", "0602", "0603", "0604", "0605", "0606", "0607"],
   "featuredKing": ["0601","0603","0605"],
   "featuredKings": ["تيتي", "بيبي الأول", "بيبي الثاني"],
-  "highPriests" : [],
+  "highPriests" : false,
   "Capital" : "منف",
   "hasPage":true
 },
@@ -372,14 +372,14 @@
   "themeColor": "FirstTransitional",
   "kings": ["1101-1", "1102-1", "1103-1", "1104-1", "1105"],
   "featuredKing": ["1101-1","1103-1","1105"],
-  "highPriests" : [],
+  "highPriests" : false,
   "featuredKings": ["منتحتب الاول ", "انتف الثاني", "منتحتب التاني"],
   "Capital" : "طيبة",
   "hasPage":true
 },
 {
   "id": "11-2",
-  "eraId": "Middle Kingdom",
+  "eraId": "middle-kingdom",
   "name": "الأسرة الحادي عشر النصف الثاني",
   "number": "XI-2",
   "startDate": 2055,
@@ -415,7 +415,7 @@
   ],
   "themeColor": "middle",
   "kings": ["1105", "1102-2", "1103-2"],
-  "featuredKing": ["1105","1102-2","1106-2"],
+  "featuredKing": ["1105","1102-2","1103-2"],
   "highPriests" : [],
   "featuredKings": ["منتحتب التاني ", "منتحتب الثالث", "منتحتب  الرابع"],
   "Capital" : "طيبة",
@@ -460,7 +460,6 @@
   "themeColor": "middle",
   "kings": ["1201", "1202", "1203", "1204", "1205", "1206","1207","1208"],
   "featuredKing": ["1201","1205","1206"],
-  "featuredKings": ["أمنمحات الأول", "سنوسرت الثالث", "أمنمحات الثالث"],
   "highPriests" : [],
   "Capital" : "إيجت-تاوي",
   "hasPage":true
@@ -504,7 +503,6 @@
   "themeColor": "middle",
   "kings": ["1301", "1302", "1303"],
   "featuredKing": ["1301","1302","1303"],
-  "featuredKings": ["سوبك حتب الثالث", "نفر حتب الأول", "سوبك حتب الرابع"],
   "highPriests" : [],
   "Capital" : "إيجت-تاوي",
   "hasPage":true
@@ -704,7 +702,7 @@
    }
   ],
   "themeColor": "new",
-  "kings": ["1801", "1902", "1903", "1904", "1905", "1906", "1907"],
+  "kings": ["1901", "1902", "1903", "1904", "1905", "1906", "1907"],
   "featuredKing": ["1903","1902","1904"],
   "featuredKings": ["رمسيس الثاني", "سيتي الاول", "مرنبتاح"],
   "highPriests" : [],
@@ -882,7 +880,6 @@
   "themeColor": "ThirdTransition",
   "kings": ["2301", "2302", "2303", "2304", "2305", "2306", "2307","2308","2309"],
   "featuredKing": ["2301","2303","2304"],
-  "featuredKings":  ["بيدوباست الأول", "أوسوركون الثالث", "تاكيلوت الثالث"],
   "highPriests" : [],
   "Capital" : "ليونتوبوليس",
   "hasPage":true
@@ -940,7 +937,6 @@
   "kings": ["2501", "2502", "2503", "2504", "2505"],
   "featuredKing": ["2501","2502","2504"],
   "highPriests" : [],
-  "featuredKings":  ["بيي", "شباكا", "طهراقة"],
   "Capital" : "منف وطيبة (في مصر)و نبتة (في السودان)",
   "hasPage":true
 },
@@ -983,7 +979,6 @@
   "themeColor":"LatePeriod",
   "kings": ["2601", "2602", "2603", "2604", "2605","2606"],
   "featuredKing": ["2601","2602","2605"],
-  "featuredKings":  ["بسماتيك الأول", "نخاو الثاني", "أحمس الثاني"],
   "highPriests" : [],
   "Capital" : "سايس",
   "hasPage":true
@@ -1027,7 +1022,6 @@
   "themeColor": "LatePeriod",
   "kings": ["2501", "2502", "2503", "2504", "2505"],
   "featuredKing": ["2501","2502","2504"],
-  "featuredKings": ["قمبيز الثاني", "دارا الأول", "أخشيرش الأول"],
   "highPriests" : [],
   "Capital" : "منف في مصر و برسبوليس  في بلاد فارس",
   "hasPage":true
@@ -1070,8 +1064,7 @@
   ],
   "themeColor": "LatePeriod",
   "kings": ["2801"],
-  "featuredKing": ["2801"],
-  "featuredKings": ["أميـرتـايـوس الثاني","لا يوجد","لا يوجد"],
+  "featuredKing": ["2801","2802","2803"],
   "highPriests" : [],
   "Capital" : "سايس",
   "hasPage":true

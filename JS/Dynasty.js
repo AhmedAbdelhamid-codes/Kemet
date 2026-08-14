@@ -37,7 +37,7 @@ Promise.all([
 
     let Dynasty = DynastiesData.find(function(Dynasty){
        return Dynasty.id == dynastyId
-   })
+    })
 
     let era = erasData.find(function(era){
         return era.id == Dynasty.eraId
@@ -136,6 +136,18 @@ Promise.all([
             </div>
         </div>
     `
+    
+    let kings_header = document.getElementById("header").innerHTML = `
+       <h2 class="title item d-flex justify-content-start align-items-center gap-2">
+       <i class="fa-solid fa-crown crown"></i>
+       ملوك هذه الاسرة
+       </h2>
+       <h3 class="sub-title item">
+        ${kings.length}  فرعوناً على امتداد نحو ${Dynasty.startDate - Dynasty.endDate}~ من السنين
+       </h3>
+    `
+
+   
 
     let kings_cards = document.getElementById("cards")
 
@@ -190,9 +202,15 @@ Promise.all([
      }
 
     kings_cards.innerHTML = cards
+  
+    let highPriests = document.getElementById("highPriests")
 
+    // if(Dynasty.highPriests.length > 0){
+    //  highPriests.classList.add("py-5")
 
+    // }
 
+    
     
 
 let counter = document.querySelector(".counter");

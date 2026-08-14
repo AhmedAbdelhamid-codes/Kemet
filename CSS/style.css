@@ -20,14 +20,17 @@
     /* Papyrus */
     --papyrus-light: #FAF0DC;
     --papyrus: #F5E6C8;
-    --papyrus-dark: #D4A853;
+    --papyrus-dark: #faf0dc7f;
     /* Sand */
     --sand-light: #E8D5A3;
     --sand: #D4A853;
     --sand-dark: #B8892E;
 
     /* transetion */
-    --trans: 0.3s
+    --trans: 0.3s;
+
+    /* border */
+    --border:#503d17
 }
 
 /* ═══════════════════════════════════════
@@ -1450,15 +1453,44 @@ content: none;
 
 /* kings card sec */
 
+.kings{
+  padding-block: 170px;
+}
+
+.kings::before{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to left,transparent,#c9a84c86,transparent);
+}
+
+.kings .kings-header .title{
+  color: var(--gold);
+  font-family: "Amiri", serif;
+  font-size: 26px;  
+}
+
+.kings .kings-header .sub-title{
+  color: var(--papyrus-light);
+  font-size: 16px;  
+}
+
+.kings .kings-header .crown{
+  font-size: 18px;
+}
+
 .kings .card {
   background-color: var(--obsidian-light);
+  border: 1px solid #c9a84c2e;
   transition: var(--trans);
   cursor: pointer;
 }
 
 .kings .card:hover {
   transform: translateY(-3px);
-  box-shadow: -1px 1px 10px var(--papyrus);
+   border: 1px solid var(--gold);
 }
 
 .kings .card img{
@@ -1535,8 +1567,124 @@ content: none;
   opacity: 0;
 }
 
+/* highPriests sec */
 
+.highPriests .highPriests-header .title{
+  color: var(--papyrus-light);
+  font-family: "Amiri", serif;
+  font-size: 30px;
+}
 
+.highPriests .highPriests-header .description{
+  color: var(--papyrus-dark);
+  font-size: 16px;
+}
+
+.highPriests .highPriests-header .note{
+  background-color: var(--obsidian-light);
+  border: 2px dashed var(--border);
+  padding: 10px;
+}
+
+.highPriests .highPriests-header .title-note{
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.highPriests .highPriests-header .description-note{
+  color: var(--papyrus-dark) ;
+  font-family: "Amiri", serif;
+  font-size: 16px;
+}
+
+.highPriests-cards .card-name .title{
+  background-color: var(--obsidian-light);
+  border: 2px solid var(--border);
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+    transition: var(--trans);
+}
+
+.highPriests-cards .card-name .title:hover{
+  background: linear-gradient(to top,#483b26,var(--obsidian-light));
+  border: 2px solid var(--gold);
+}
+
+.highPriests-cards .card-name .title .number-Of_King{
+  color: var(--border);
+}
+
+.highPriests-cards .card-name .title .king-Name{
+  color: var(--papyrus-dark);
+  transition: var(--trans);
+}
+
+.highPriests-cards .card-name .title:hover .king-Name{
+  color: var(--papyrus-light)
+}
+
+.highPriests-cards .card-hov{
+  background-color: var(--obsidian-light);
+  top: -330px;
+  width: 25vw;
+  min-width: 270px;
+  padding: 10px;
+  border: 2px dashed var(--gold);
+  display: none;
+}
+
+.highPriests-cards .card-name:hover ~ .card-hov {
+    display: flex;
+}
+
+.highPriests-cards .card-hov::a
+
+.highPriests-cards .card-hov .dtails .number{
+  font-size: 50px;
+  color: var(--border);
+  font-family: "Amiri", serif;
+}
+
+.highPriests-cards .card-hov .dtails .date{
+  color: var(--gold);
+ font-size: 14px;
+ font-family: "Amiri", serif;
+}
+
+.highPriests-cards .card-hov .dtails .king-name{
+  font-family: "Amiri", serif;
+  font-size: 26px;
+  color: var(--papyrus-light);
+}
+
+.highPriests-cards .card-hov .dtails .tittle{
+  color: var(--papyrus-dark);
+ font-size: 10px;
+}
+
+.highPriests-cards .card-hov .achev{
+border-top: 2px solid var(--border);  
+border-bottom: 2px solid var(--border);
+padding: 10px;
+}
+
+.highPriests-cards .card-hov .achev .achev-tittle{
+  color: var(--gold);
+ font-size: 14px;
+}
+
+.highPriests-cards .card-hov .achev .achev-description{
+  color: var(--gold);
+  font-family: "Amiri", serif;
+  font-size: 16px;
+}
+
+.highPriests-cards .card-hov .description{
+  color: var(--papyrus-dark) ;
+  font-family: "Amiri", serif;
+  font-size: 16px;
+}
 
 
 
