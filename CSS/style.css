@@ -1453,11 +1453,11 @@ content: none;
 
 /* kings card sec */
 
-.kings{
+.kings-sec{
   padding-block: 170px;
 }
 
-.kings::before{
+.kings-sec::before{
   content: "";
   position: absolute;
   bottom: -10px;
@@ -1466,68 +1466,68 @@ content: none;
   background: linear-gradient(to left,transparent,#c9a84c86,transparent);
 }
 
-.kings .kings-header .title{
+.kings-sec .kings-header .title{
   color: var(--gold);
   font-family: "Amiri", serif;
   font-size: 26px;  
 }
 
-.kings .kings-header .sub-title{
+.kings-sec .kings-header .sub-title{
   color: var(--papyrus-light);
   font-size: 16px;  
 }
 
-.kings .kings-header .crown{
+.kings-sec .kings-header .crown{
   font-size: 18px;
 }
 
-.kings .card {
+.kings-sec .card {
   background-color: var(--obsidian-light);
   border: 1px solid #c9a84c2e;
   transition: var(--trans);
   cursor: pointer;
 }
 
-.kings .card:hover {
+.kings-sec .card:hover {
   transform: translateY(-3px);
    border: 1px solid var(--gold);
 }
 
-.kings .card img{
+.kings-sec .card img{
   width: 100%;
   height: 200px;
   object-fit:cover;
 }
 
-.kings .card-body .dtails span{
+.kings-sec .card-body .dtails span{
   color: #50462E;
   font-size: 12px;
   margin-bottom: 20px;
 }
 
-.kings .card-body .card-title{
+.kings-sec .card-body .card-title{
   color: var(--papyrus-light);
   font-family: "Amiri", serif;
   font-size: 26px;
 }
 
-.kings .card-body .card-title .star{
+.kings-sec .card-body .card-title .star{
   color: var(--gold);
   font-size: 10px;
 }
 
-.kings .card-body .card-subtitle{
+.kings-sec .card-body .card-subtitle{
   color: var(--gold);
   font-size: 12px ;
 }
 
-.kings .card-body .card-history{
+.kings-sec .card-body .card-history{
   color: var(--sand-light);
   font-size: 12px ;
   font-weight: 200;
 }
 
-.kings .card-body .card-text{
+.kings-sec .card-body .card-text{
   color: var(--papyrus);
   font-size: 12px ;
   font-weight: 400;
@@ -1537,7 +1537,7 @@ content: none;
   overflow: hidden;
 }
 
-.kings .card-body .explore-btn{
+.kings-sec .card-body .explore-btn{
   text-align: center;
   background-color: transparent;
   border: 1px dotted var(--gold);
@@ -1548,12 +1548,12 @@ content: none;
   transition: var(--trans);
 }
 
-.kings .card-body .explore-btn:hover{
+.kings-sec .card-body .explore-btn:hover{
   transform: translateY(-2px);
   background-color: var(--gold);
 }
  
-.kings .card-body .note{
+.kings-sec .card-body .note{
   padding: 5px 10px;
   border: 1px dotted #c9a84c41;
   border-radius: 10px;
@@ -1562,7 +1562,7 @@ content: none;
   font-size: 16px;
 }
 
-.kings .item{
+.kings-sec .item{
   transform: translateY(30px);
   opacity: 0;
 }
@@ -1638,7 +1638,7 @@ content: none;
     display: flex;
 }
 
-.highPriests-cards .card-hov::a
+/* .highPriests-cards .card-hov::a */
 
 .highPriests-cards .card-hov .dtails .number{
   font-size: 50px;
