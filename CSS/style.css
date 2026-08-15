@@ -1644,14 +1644,14 @@ content: none;
 /* LG — 6 cards per row */
 @media (min-width: 992px) {
 
-    .item:nth-child(6n + 1) .card-hov,
-    .item:nth-child(6n + 2) .card-hov {
+    .HP:nth-child(1) .card-hov,
+    .HP:nth-child(2) .card-hov {
         right: 10px;
         transform: none;
     }
 
-    .item:nth-child(6n + 5) .card-hov,
-    .item:nth-child(6n + 6) .card-hov {
+    .HP:nth-child(5) .card-hov,
+    .HP:nth-child(6) .card-hov {
         right: auto;
         left: 10px;
         transform: none;
@@ -1661,14 +1661,14 @@ content: none;
 /* MD — 4 cards per row */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-    .item:nth-child(4n + 1) .card-hov,
-    .item:nth-child(4n + 2) .card-hov {
+    .HP:nth-child(1) .card-hov,
+    .HP:nth-child(2) .card-hov {
         right: 10px;
         transform: none;
     }
 
-    .item:nth-child(4n + 3) .card-hov,
-    .item:nth-child(4n + 4) .card-hov {
+    .HP:nth-child(3) .card-hov,
+    .HP:nth-child(4) .card-hov {
         right: auto;
         left: 10px;
         transform: none;
@@ -1678,12 +1678,12 @@ content: none;
 /* Mobile — 2 cards per row */
 @media (max-width: 767.98px) {
 
-    .item:nth-child(odd) .card-hov {
+    .HP:nth-child(odd) .card-hov {
         right: 10px;
         transform: none;
     }
 
-    .item:nth-child(even) .card-hov {
+    .HP:nth-child(even) .card-hov {
         right: auto;
         left: 10px;
         transform: none;
