@@ -46,9 +46,14 @@ Promise.all([
     let kings = kingsaData.filter(function(king){
         return Dynasty.kings.includes(king.id)
     })
+
+    let highPriests = kingsaData.filter(function(king){
+        return Dynasty.highPriests.includes(king.id)
+    })
    
     console.log(Dynasty)
     console.log(kings)
+    console.log(highPriests)
 
     document.getElementById("linkEra").innerHTML= `
      <a href="./Dynasties.html?era-id=${era.id}" title="${era.name}" class="eras-link link-underline link-underline-opacity-0">${era.name}</a>
@@ -203,29 +208,80 @@ Promise.all([
 
     kings_cards.innerHTML = cards
   
-    let highPriests = document.getElementById("highPriests")
-
-    // if(Dynasty.highPriests.length > 0){
-    //  highPriests.classList.add("py-5")
-
-    // }
-
+    // =============================//
     
-    
+    let highPriests_container = document.getElementById("highPriests-container")
+    let HP_cards = ""
 
-let counter = document.querySelector(".counter");
+
+    if(Dynasty.highPriests.length > 0){
+     document.getElementById("highPriests").classList.add("py-5")
+
+     highPriests_container.innerHTML = `
+       <div class="highPriests-header HP mt-4 mb-5 d-flex justify-content-between align-items-center gap-2 flex-md-nowrap flex-wrap" id="header">
+          <div class="dtails">
+            <h2 class="title">حكام الجنوب الحقيقيون</h2>
+            <p class="description">في ظل ضعف رمسيس الحادي عشر ومن جاء بعده من فراعنة تانيس، أمسك هؤلاء الكهنة بزمام السلطة في مصر العليا — يجمعون بين العباءة الدينية وسلطة الدولة في شخص واحد. مرّر الماوس على الاسم لتظهر تفاصيل كل كاهن.</p>
+           </div>
+          <div class="note">
+            <h2 class="title-note mb-2">ملاحظة تاريخية</h2>
+           <p class="description-note">لم يكن لقب "كاهن أعظم لآمون" مجرد رتبة دينية في هذه الحقبة — كان يعني السيطرة التامة على الاقتصاد والجيش وإدارة مصر العليا كلها.</p>
+          </div>
+        </div>
+
+        <div id="highPriests-cards" class="highPriests-cards row row-cols-lg-6 row-cols-md-4 row-cols-sm-2 row-cols-2 g-4">
+        
+        </div>
+     `
+
+     let highPriests_cards = document.getElementById("highPriests-cards")
+     
+     for (let i = 0; i < highPriests.length; i++) {
+         HP_cards+= `
+         <div class="col HP position-relative">
+            <div class="card-name">
+               <div class="title d-flex justify-content-center align-items-center gap-2">
+                <span class="number-Of_King">0${i + 1}</span>
+                <span class="king-Name">${highPriests[i].name}</span>
+               </div>
+            </div>
+            <div class="card-hov position-absolute flex-column gap-2">
+             <div class="dtails d-flex justify-content-between align-items-center">
+                <span class="number">0${i + 1}</span>
+                <div class="dtails-of_king">
+                    <span class="date mb-2">${highPriests[i].startDate} – ${highPriests[i].endDate} BCE</span>
+                    <h2 class="king-name mb-3">${highPriests[i].name}</h2>
+                    <h3 class="tittle mb-2">الكاهن الاعظم لامون</h3>
+                </div>
+             </div>
+             <div class="achev">
+                <h2 class="achev-tittle">الانجازات الابرز</h2>
+                <p class="achev-description m-0">${highPriests[i].highlight}</p>
+             </div>
+             <p class="description">${highPriests[i].description}</p>
+            </div>
+       </div>
+      `
+            
+     } 
+      highPriests_cards.innerHTML = HP_cards
+    }
+
 let items = document.querySelectorAll(".item")
-
+let HPs = document.querySelectorAll(".HP")
 
 let observer = new IntersectionObserver(function(entries){
 
     entries.forEach(function(entry){
      if(entry.isIntersecting){
 
-        startCounter();
-
         if(entry.target.classList.contains("item")){
             let index = Array.from(items).indexOf(entry.target)
+            entry.target.style.animation = `fadeUp 0.5s ${(index + 1) * 0.1}s ease both`
+        }
+        
+        if(entry.target.classList.contains("HP")){
+            let index = Array.from(HPs).indexOf(entry.target)
             entry.target.style.animation = `fadeUp 0.5s ${(index + 1) * 0.1}s ease both`
         }
 
@@ -239,33 +295,34 @@ items.forEach(function(item){
     observer.observe(item)
 })
 
-observer.observe(counter);
+HPs.forEach(function(HP){
+  observer.observe(HP)
+})
 
 
+// function startCounter(){
 
-function startCounter(){
+//     let current = `${Dynasty.startDate - Dynasty.endDate}`;
+//     let target = `${Dynasty.startDate}`;
 
-    let current = `${Dynasty.startDate - Dynasty.endDate}`;
-    let target = `${Dynasty.startDate}`;
+//     let interval = setInterval(function(){
 
-    let interval = setInterval(function(){
+//     let step = (target - current) * 0.05;
 
-    let step = (target - current) * 0.05;
+//     current += step;
 
-    current += step;
-
-    counter.innerHTML = ` ${Math.floor(current)} BCE`;
+//     counter.innerHTML = ` ${Math.floor(current)} BCE`;
 
 
-    if(current >= target - 1){
+//     if(current >= target - 1){
 
-        counter.innerHTML =  `${Math.floor(target)} BCE`;
-        clearInterval(interval);
+//         counter.innerHTML =  `${Math.floor(target)} BCE`;
+//         clearInterval(interval);
 
-    }
+//     }
 
-},10);
-}
+// },10);
+// }
 
 
 });

@@ -1454,7 +1454,7 @@ content: none;
 /* kings card sec */
 
 .kings-sec{
-  padding-block: 170px;
+  padding-bottom: 170px;
 }
 
 .kings-sec::before{
@@ -1568,6 +1568,11 @@ content: none;
 }
 
 /* highPriests sec */
+
+.highPriests .HP{
+  transform: translatey(30px);
+  opacity: 0;
+}
 
 .highPriests .highPriests-header .title{
   color: var(--papyrus-light);

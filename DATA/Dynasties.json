@@ -38,7 +38,7 @@
   "themeColor": "predynastic",
   "kings": ["0001","0002","0003","0004","0005","0101"],
   "featuredKing": ["0003","0004","0005"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "عدة مراكز رئيسية في الصعيد",
   "hasPage":true
 },
@@ -82,7 +82,7 @@
   "kings": ["0101", "0102", "0103", "0104", "0105", "0106", "0107", "0108"],
   "featuredKing": ["0101","0102","0103"],
   "featuredKings": ["نارمر ","حور عحا","خنت"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "منف",
   "hasPage":true
 },
@@ -126,7 +126,7 @@
   "kings": ["0201", "0202", "0203", "0204", "0205", "0206", "0207"],
   "featuredKing": ["0202","0205","0207"],
   "featuredKings": ["ني نتجر","بر إيب سن","خع سخموي"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "منف",
   "hasPage":true
 },
@@ -170,7 +170,7 @@
   "kings": ["0301", "0302", "0303", "0304", "0305"],
   "featuredKing": ["0302","0303","0305"],
   "featuredKings": ["زوسر", "سخم خت", "حوني"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "منف",
   "hasPage":true
 },
@@ -214,7 +214,7 @@
   "kings": ["0401", "0402", "0403", "0404", "0405", "0406", "0407", "0408"],
   "featuredKing": ["0401","0402","0404"],
   "featuredKings": ["سنفرو", "خوفو", "خفرع"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "منف",
   "hasPage":true
 },
@@ -258,7 +258,7 @@
   "kings": ["0501", "0502", "0503", "0504", "0405", "0506", "0507", "0508", "0509"],
   "featuredKing": ["0501","0502","0509"],
   "featuredKings": ["أوسركاف", "ساحورع", "أوناس"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "منف",
   "hasPage":true
 },
@@ -302,7 +302,7 @@
   "kings": ["0601", "0602", "0603", "0604", "0605", "0606", "0607"],
   "featuredKing": ["0601","0603","0605"],
   "featuredKings": ["تيتي", "بيبي الأول", "بيبي الثاني"],
-  "highPriests" : false,
+  "highPriests" : [],
   "Capital" : "منف",
   "hasPage":true
 },
@@ -372,7 +372,7 @@
   "themeColor": "FirstTransitional",
   "kings": ["1101-1", "1102-1", "1103-1", "1104-1", "1105"],
   "featuredKing": ["1101-1","1103-1","1105"],
-  "highPriests" : false,
+  "highPriests" : [],
   "featuredKings": ["منتحتب الاول ", "انتف الثاني", "منتحتب التاني"],
   "Capital" : "طيبة",
   "hasPage":true
@@ -792,7 +792,7 @@
   "themeColor": "ThirdTransition",
   "kings": ["2101", "2102", "2103", "2104", "2105", "2106", "2107"],
   "featuredKing": ["2101","2102","2103"],
-  "highPriests" : ["2108","2109","2110", "2111", "2112", "2113", "2114"],
+  "highPriests" : ["2108","2109","2110", "2111", "2112", "2113"],
   "featuredKings": ["سمندس", "بسوسنس الأول", "سي آمون"],
   "Capital" : "تانيس",
   "hasPage":true
