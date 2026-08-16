@@ -60,20 +60,6 @@ body{
   pointer-events: none;
 }
 
-.my-nav{
-  background-color: #a0793072;
-  backdrop-filter: blur(5px);
-  height: 0px;
-  transition: 0.3s;
-}
-
-.my-nav.show{
-  background-color: #a0793072;
-  backdrop-filter: blur(5px);
-  height: 110px;
-}
-
-
 @keyframes dw-up {
   0% {
     transform: translateY(20);
@@ -121,6 +107,85 @@ transition: var(--trans);
 
 .explore-btn:hover .icon{
 transform: translateX(-2px);
+}
+
+/* reset for navbar links*/
+
+.my-nav ul li{
+  color: var(--sand-light);
+}
+
+/* in eras page */
+
+.my-nav .home-link{
+  font-size: 10px;
+  color: var(--papyrus-dark);
+  transition: var(--trans);
+}
+
+.my-nav .home-link:hover{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+.my-nav .eras-link.active-page {
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+/* in era page or Dynasties pgae */
+
+.my-nav .eras-link {
+  font-size: 10px;
+  color: var(--papyrus-dark);
+  transition: var(--trans);
+}
+
+.my-nav .eras-link:hover{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+.my-nav .era-link.active-page{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+/* in Dynasty page */
+
+.my-nav .era-link{
+  font-size: 10px;
+  color: var(--papyrus-dark);
+  transition: var(--trans);
+}
+
+.my-nav .era-link:hover{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+.my-nav .dynasty-link.active-page{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+
+/* in king page */
+
+.my-nav .dynasty-link{
+  font-size: 10px;
+  color: var(--papyrus-dark);
+  transition: var(--trans);
+}
+
+.my-nav .dynasty-link:hover{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
+.my-nav .king-link.active-page{
+  font-size: 10px;
+  color: var(--sand-light);
 }
 
 /*=========الصفحة الرئسية==============*/
@@ -404,18 +469,6 @@ footer span{
       transform:translateY(0);
       opacity:1; 
     }
-}
-
-.my-nav ul li{
-  color: var(--sand-light);
-}
-
-.eras-link{
-  font-size: 12px;
-}
-
-.my-nav ul li a{
-  color: var(--sand-light);
 }
 
 .main-Page_tittle .eras-tittle {
@@ -1499,8 +1552,9 @@ content: none;
 
 .kings-sec .card img{
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit:cover;
+  object-position: center top;
 }
 
 .kings-sec .card-body .dtails span{
@@ -1817,7 +1871,87 @@ padding: 10px;
   color: var(--gold);
 }
 
+/* ═══════════════════════════════════════
+    king page
+═══════════════════════════════════════ */
 
+.hero-king{
+  background-color: #1a1209;
+}
+
+.hero-king .imge img{
+  width: 100%;
+  height: 400px;
+  object-fit:cover;
+  object-position: center top;
+  border-radius: 20px;
+}
+
+.hero-king .detailsKing .dynastyName{
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.hero-king .detailsKing .dynastyName::before{
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.hero-king .detailsKing .kingName{
+  color: var(--papyrus);
+  font-family: "Amiri", serif;
+  font-size: clamp(20px,4vw,60px);
+  font-weight: 700;
+}
+
+.hero-king .detailsKing .kingCoronationName{
+  color: var(--gold);
+  font-family: "Amiri", serif;
+  font-size: 20px;
+}
+
+.hero-king .detailsKing .overview{
+ color: var(--papyrus-dark);
+ width: 400px;
+ line-height: 2;
+ font-weight: 300;
+}
+
+.hero-king .detailsKing .overview::before{
+  content: "";
+  position: absolute;
+  right: -2px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--gold);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width : 466px) {
+.hero-king .detailsKing .overview{
+ width: 100%;
+}
+}
 
 
 

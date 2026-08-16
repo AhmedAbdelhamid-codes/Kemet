@@ -45,9 +45,15 @@ Promise.all([
     console.log(era)
     console.log(Dynasties)
 
-    document.getElementById("linkEra").innerHTML = `
-    <a href="./Dynasties.html?id=${era.id}" title="${era.name}" class="eras-link link-underline link-underline-opacity-0">${era.name}</a>
+    //===========heder===========//
+
+
+    document.getElementById("eraLink").innerHTML = `
+    <a href="./Dynasties.html?id=${era.id}" title="${era.name}" class="era-link active-page link-underline link-underline-opacity-0">${era.name}</a>
      `
+
+    //=============hero=============//
+    
     let content_hero = document.getElementById("inerr-content")
     let hero = document.querySelector(".hero-Dynasties");
 
@@ -96,7 +102,7 @@ Promise.all([
        `;
     }
 
-    // des
+    //============description=========//
     
     let description_tittle = document.querySelector(".description-tittle")
     let row = document.querySelector(".row")

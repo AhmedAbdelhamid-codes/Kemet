@@ -31,8 +31,6 @@ Promise.all([
 
     let params = getUrlId();
 
-    console.log(params)
-
     let dynastyId = params.get("dynasty-id")
 
     let Dynasty = DynastiesData.find(function(Dynasty){
@@ -55,13 +53,16 @@ Promise.all([
     console.log(kings)
     console.log(highPriests)
 
-    document.getElementById("linkEra").innerHTML= `
-     <a href="./Dynasties.html?era-id=${era.id}" title="${era.name}" class="eras-link link-underline link-underline-opacity-0">${era.name}</a>
+    //===========heder===========//
+
+    document.getElementById("eraLink").innerHTML= `
+     <a href="./Dynasties.html?era-id=${era.id}" title="${era.name}" class="era-link link-underline link-underline-opacity-0">${era.name}</a>
     `
-    document.getElementById("linkDynasty").innerHTML =`
-     <a href="./Dynasty.js?dynasty-id=${Dynasty.id}" title="${Dynasty.name}" class="eras-link link-underline link-underline-opacity-0">${Dynasty.name}</a>
+    document.getElementById("dynastyLink").innerHTML =`
+     <a href="./Dynasty.js?dynasty-id=${Dynasty.id}" title="${Dynasty.name}" class="dynasty-link active-page link-underline link-underline-opacity-0">${Dynasty.name}</a>
     `
   
+    //=============hero=============//
     let hero_content = document.querySelector(".hero-content");
     let details = document.querySelector(".details-row");
     let description = document.querySelector(".description-row") ;
@@ -175,7 +176,7 @@ Promise.all([
             <h6 class="card-subtitle mb-3 ">${kings[i].title}</h6>
             <h6 class="card-history mb-4 ">${kings[i].startDate} – ${kings[i].endDate} BCE</h6>
             <p class="card-text">${kings[i].Description[0]}</p>
-             <a href="" class="explore-btn d-flex justify-content-center align-items-center gap-2">استكشف الملك 
+             <a href="./king.html?king-id=${kings[i].id}" class="explore-btn d-flex justify-content-center align-items-center gap-2">استكشف الملك 
               <i class="fa-solid fa-arrow-left icon"></i>
              </a>
            </div>
@@ -278,39 +279,97 @@ let indexOfCrruntDynasty = DynastiesData.indexOf(Dynasty)
 let PreviousDynasty = DynastiesData[indexOfCrruntDynasty - 1];
 let NextDynasty = DynastiesData[indexOfCrruntDynasty + 1];
 
+
 let next_btn = document.getElementById("next-btn");
 let toEra_btn = document.getElementById("toEra-btn");
 let pre_btn = document.getElementById("pre-btn");
 
-if (NextDynasty) {
-    next_btn.innerHTML = `
-        <span class="arrow">
-            <i class="fa-solid fa-circle-right"></i>
-        </span>
-        <div class="name">
-            <span class="d-inline-block mb-2">الاسرة التالية</span>
-            <h2 class="mb-2">${NextDynasty.name}</h2>
-            <p class="m-0">الاسرة ${NextDynasty.number}</p>
-        </div>
-`
-} else {
-    next_btn.disabled = true;
+while (true) {
+    if (NextDynasty) {
+
+        if (NextDynasty.hasPage) {
+
+            next_btn.innerHTML = `
+                <span class="arrow">
+                    <i class="fa-solid fa-circle-right"></i>
+                </span>
+                <div class="name">
+                    <span class="d-inline-block mb-2">الاسرة التالية</span>
+                    <h2 class="mb-2">${NextDynasty.name}</h2>
+                    <p class="m-0">الاسرة ${NextDynasty.number}</p>
+                </div>
+            `;
+
+            break;
+
+        } else {
+
+            indexOfCrruntDynasty++;
+            NextDynasty = DynastiesData[indexOfCrruntDynasty + 1];
+
+        }
+
+    } else {
+
+        next_btn.disabled = true;
+        next_btn.innerHTML = `
+                <span class="arrow">
+                    <i class="fa-solid fa-hourglass"></i>
+                </span>
+                <div class="name">
+                    <span class="d-inline-block mb-2">لا توجد اسرة التالية</span>
+                    <h2 class="mb-2">هذه اخر اسرة مضافة حتي الان</h2>
+                    <p class="m-0">تابعوا KEMET لكل جديد</p>
+                </div>
+            `;
+        break;
+
+    }
 }
 
-if (PreviousDynasty) {
-    pre_btn.innerHTML = `
-        <div class="name">
-            <span class="d-inline-block mb-2">الاسرة السابقة</span>
-            <h2 class="mb-2">${PreviousDynasty.name}</h2>
-            <p class="m-0">الاسرة ${PreviousDynasty.number}</p>
-        </div>
-        <span class="arrow">
-            <i class="fa-solid fa-circle-left"></i>
-        </span>
-`
-} else {
-    pre_btn.disabled = true;
+while (true) {
+    if (PreviousDynasty) {
+
+        if (PreviousDynasty.hasPage) {
+
+            pre_btn.innerHTML = `
+                <div class="name">
+                    <span class="d-inline-block mb-2">الاسرة السابقة</span>
+                    <h2 class="mb-2">${PreviousDynasty.name}</h2>
+                    <p class="m-0">الاسرة ${PreviousDynasty.number}</p>
+                </div>
+                 <span class="arrow">
+                    <i class="fa-solid fa-circle-left"></i>
+                </span>
+            `;
+
+            break;
+
+        } else {
+
+            indexOfCrruntDynasty--;
+            PreviousDynasty = DynastiesData[indexOfCrruntDynasty];
+
+        }
+
+    } else {
+
+        pre_btn.disabled = true;
+         pre_btn.innerHTML = `
+                <div class="name">
+                    <span class="d-inline-block mb-2">لا توجد اسرة قبل هذه</span>
+                    <h2 class="mb-2">هذه اول اسرة في التاريخ</h2>
+                    <p class="m-0">تابعوا KEMET لكل جديد</p>
+                </div>
+                <span class="arrow">
+                    <i class="fa-solid fa-hourglass"></i>
+                </span>
+            `;
+        break;
+
+    }
 }
+
 
 next_btn.addEventListener("click",function(){
 
