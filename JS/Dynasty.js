@@ -50,7 +50,7 @@ Promise.all([
     let highPriests = kingsaData.filter(function(king){
         return Dynasty.highPriests.includes(king.id)
     })
-   
+
     console.log(Dynasty)
     console.log(kings)
     console.log(highPriests)
@@ -83,7 +83,7 @@ Promise.all([
      <div class="col-lg-2 col-md-3 col-4">
         <div class="FOUNDED space">
             <h3 class="tittle fs-5">بدأت</h3>
-            <p class="paragraph counter">${Dynasty.startDate - Dynasty.endDate}</p>
+            <p class="paragraph">${Dynasty.startDate}</p>
         </div>
     </div>
     <div class="col-lg-2 col-md-3 col-4">
@@ -210,12 +210,13 @@ Promise.all([
   
     // =============================//
     
-    let highPriests_container = document.getElementById("highPriests-container")
-    let HP_cards = ""
+    let highPriests_container = document.getElementById("highPriests-container");
+    let HP_cards = "";
 
 
     if(Dynasty.highPriests.length > 0){
      document.getElementById("highPriests").classList.add("py-5")
+     document.getElementById("kings-sec").classList.add("show")
 
      highPriests_container.innerHTML = `
        <div class="highPriests-header HP mt-4 mb-5 d-flex justify-content-between align-items-center gap-2 flex-md-nowrap flex-wrap" id="header">
@@ -269,6 +270,67 @@ Promise.all([
 
 let items = document.querySelectorAll(".item")
 let HPs = document.querySelectorAll(".HP")
+
+//========btns sec for Dynasty page==========//
+
+
+let indexOfCrruntDynasty = DynastiesData.indexOf(Dynasty)
+let PreviousDynasty = DynastiesData[indexOfCrruntDynasty - 1];
+let NextDynasty = DynastiesData[indexOfCrruntDynasty + 1];
+
+let next_btn = document.getElementById("next-btn");
+let toEra_btn = document.getElementById("toEra-btn");
+let pre_btn = document.getElementById("pre-btn");
+
+if (NextDynasty) {
+    next_btn.innerHTML = `
+        <span class="arrow">
+            <i class="fa-solid fa-circle-right"></i>
+        </span>
+        <div class="name">
+            <span class="d-inline-block mb-2">الاسرة التالية</span>
+            <h2 class="mb-2">${NextDynasty.name}</h2>
+            <p class="m-0">الاسرة ${NextDynasty.number}</p>
+        </div>
+`
+} else {
+    next_btn.disabled = true;
+}
+
+if (PreviousDynasty) {
+    pre_btn.innerHTML = `
+        <div class="name">
+            <span class="d-inline-block mb-2">الاسرة السابقة</span>
+            <h2 class="mb-2">${PreviousDynasty.name}</h2>
+            <p class="m-0">الاسرة ${PreviousDynasty.number}</p>
+        </div>
+        <span class="arrow">
+            <i class="fa-solid fa-circle-left"></i>
+        </span>
+`
+} else {
+    pre_btn.disabled = true;
+}
+
+next_btn.addEventListener("click",function(){
+
+ location.href = `./Dynasty.html?dynasty-id=${NextDynasty.id}`;
+
+})
+
+toEra_btn.addEventListener("click",function(){
+
+ location.href = `./Dynasties.html?era-id=${era.id}`;
+
+})
+
+pre_btn.addEventListener("click",function(){
+
+ location.href = `./Dynasty.html?dynasty-id=${PreviousDynasty.id}`;
+
+})
+
+//===========anmation==============//
 
 let observer = new IntersectionObserver(function(entries){
 

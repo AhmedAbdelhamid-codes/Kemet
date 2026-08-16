@@ -325,6 +325,88 @@ Promise.all([
 
         gallery.innerHTML = cartonaa
 
+
+//========btns sec for Dynasty page==========//
+
+
+        let indexOfCrruntEra = erasData.indexOf(era)
+        let PreviousEra = erasData[indexOfCrruntEra - 1];
+        let NextEra = erasData[indexOfCrruntEra + 1];
+
+        let next_btn = document.getElementById("next-btn");
+        let toEras_btn = document.getElementById("toEras-btn");
+        let pre_btn = document.getElementById("pre-btn");
+
+     if (NextEra) {
+       next_btn.innerHTML = `
+          <span class="arrow">
+            <i class="fa-solid fa-circle-right"></i>
+            </span>
+           <div class="name">
+            <span class="d-inline-block mb-2">العصر التالية</span>
+            <h2 class="mb-2">${NextEra.name}</h2>
+              <p class="m-0">${NextEra.englishName}</p>
+          </div>
+   ` 
+    } else {
+       next_btn.disabled = true;
+       next_btn.innerHTML = `
+           <span class="arrow">
+             <i class="fa-solid fa-hourglass"></i>
+            </span>
+           <div class="name">
+            <span class="d-inline-block mb-2">العصر التالية</span>
+            <h2 class="mb-2">لم تُضف عصور لاحقة بعد</h2>
+              <p class="m-0">تابع KEMET لترى كل جديد</p>
+           </div>
+     ` 
+    }
+
+    if (PreviousEra) {
+        pre_btn.innerHTML = `
+            <div class="name">
+            <span class="d-inline-block mb-2">العصر السابقة</span>
+              <h2 class="mb-2">${PreviousEra.name}</h2>
+            <p class="m-0">${PreviousEra.englishName}</p>
+           </div>
+          <span class="arrow">
+              <i class="fa-solid fa-circle-left"></i>
+          </span>
+         `
+      } else {
+       pre_btn.disabled = true;
+        pre_btn.innerHTML = `
+            <div class="name">
+            <span class="d-inline-block mb-2">العصر السابقة</span>
+              <h2 class="mb-2">لا يوجد عصور اقدم </h2>
+              <p class="m-0">تابع KEMET لترى كل جديد</p>
+           </div>
+          <span class="arrow">
+             <i class="fa-solid fa-hourglass"></i>
+          </span>
+         `
+      }
+
+next_btn.addEventListener("click",function(){
+
+ location.href = `./Dynasties.html?era-id=${NextEra.id}`;
+
+})
+
+toEras_btn.addEventListener("click",function(){
+
+ location.href = `./Eras.html`;
+
+})
+
+pre_btn.addEventListener("click",function(){
+
+ location.href = `./Dynasties.html?era-id=${PreviousEra.id}`;
+
+})
+
+
+//===========anmation==============//
          
        let descriptions = document.querySelectorAll(".descriptionshow")
        let timelines = document.querySelectorAll(".timelineShow")
