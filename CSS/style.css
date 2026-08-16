@@ -1887,6 +1887,10 @@ padding: 10px;
   border-radius: 20px;
 }
 
+.hero-king .col-12{
+  margin-top: 150px;
+}
+
 .hero-king .detailsKing .dynastyName{
   color: var(--gold);
   font-size: 12px;
@@ -1951,6 +1955,8 @@ padding: 10px;
 .hero-king .detailsKing .overview{
  width: 100%;
 }
+
+
 }
 
 
