@@ -1877,18 +1877,32 @@ padding: 10px;
 
 .hero-king{
   background-color: #1a1209;
+  height: 100vh;
+}
+
+.hero-king .imge{
+flex-shrink: 1;
+width: 100%;
+height: 400px;
 }
 
 .hero-king .imge img{
-  width: 100%;
-  height: 400px;
   object-fit:cover;
   object-position: center top;
   border-radius: 20px;
 }
 
-.hero-king .col-12{
-  margin-top: 150px;
+@media (max-width : 991px) {
+.hero-king{
+  height: auto;
+}
+.hero-king .imge{
+flex-shrink: 0;
+width: 100%;
+height: 50%;
+
+  margin-top: 100px;
+}
 }
 
 .hero-king .detailsKing .dynastyName{
@@ -1910,7 +1924,7 @@ padding: 10px;
 .hero-king .detailsKing .kingName{
   color: var(--papyrus);
   font-family: "Amiri", serif;
-  font-size: clamp(20px,4vw,60px);
+  font-size: clamp(30px,4vw,60px);
   font-weight: 700;
 }
 
@@ -1936,27 +1950,42 @@ padding: 10px;
   background-color: var(--gold);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width : 466px) {
 .hero-king .detailsKing .overview{
  width: 100%;
 }
+}
 
+.hero-king .detailsKing li:not(:last-child){
+text-align: center;
+font-size: 12px;
+background-color: #2A2015;
+padding: 10px;
+color: var(--sand-light);
+font-weight: 300;
+border: 1px solid var(--border);
+border-radius: 40px;
+}
 
+.hero-king .detailsKing li .bold{
+color: var(--gold-light);
+font-weight: bold;
+}
+
+.hero-king .detailsKing .dynastyLink{
+ text-align: center;
+ font-size: 12px;
+ padding: 10px;
+ color: var(--sand-light);
+ background-color: var(--lapis-dark);
+ border: 1px solid var(--lapis);
+ border-radius: 40px;
+ font-weight: 300;
+ transition: var(--trans);
+}
+
+.hero-king .detailsKing .dynastyLink:hover{
+  background-color: var(--lapis);
 }
 
 

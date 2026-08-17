@@ -62,6 +62,46 @@ Promise.all([
     `
     //============hero================//
 
+    document.getElementById("horo-row").innerHTML=`
+        <div class="col-lg-4 col-12">
+          <div class="imge z-2 d-flex">
+            <img class="w-100 h-100" src="${king.image}"  alt="${king.name}">
+           </div>
+        </div>
+       <div class="col-lg-6 col-12">
+        <div class="detailsKing">
+          <span class="dynastyName position-relative d-inline-block ps-5">
+             ${Dynasty.name}
+          </span>
+          <h1 class="kingName mb-3">
+             ${king.name}
+          </h1>
+          <h2 class="kingCoronationName mb-4">
+                ${king.CoronationAR}  |  ${king.CoronationEN}
+          </h2>
+          <p class="overview position-relative ps-3">
+              ${king.Overview}
+          </p>
+          <ul class="d-flex justify-content-start align-items-center gap-3 flex-wrap list-unstyled">
+            <li class="date">
+              فترة الحكم <span class="bold">${king.startDate} – ${king.endDate} ق.م </span>
+            </li>
+            <li class="years">
+              مدة الحكم <span class="bold">${king.startDate - king.endDate} عامًا</span>
+            </li>
+            <li class="BurialSite">
+               مكان الدفن <span class="bold">${king.BurialSite}</span>
+            </li>
+            <li>
+               <a href="./Dynasty.html?dynasty-id=${Dynasty.id}" class="dynastyLink link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-1 align-items-center "> ${Dynasty.name} 
+                <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+               </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `
     
+
 
 })
