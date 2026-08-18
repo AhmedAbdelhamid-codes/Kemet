@@ -205,48 +205,6 @@ Kemet/
 
 ---
 
-# 🏗️ Application Flow
-
-The general rendering process can be summarized as:
-
-```text
-User opens a page
-        ↓
-JavaScript initializes
-        ↓
-Data is loaded from JSON
-        ↓
-Application processes the data
-        ↓
-Required entity is identified
-        ↓
-Dynamic template is generated
-        ↓
-DOM is updated
-        ↓
-Animations & interactions are initialized
-```
-
-For dynamic king pages:
-
-```text
-king.html?king-id=1805
-        ↓
-Read URLSearchParams
-        ↓
-Extract king-id
-        ↓
-Search kings.json
-        ↓
-Find matching king
-        ↓
-Generate template
-        ↓
-Render king information
-```
-
----
-
 # 🎯 Why KEMET?
 
 KEMET was created as an attempt to combine **historical storytelling with modern frontend development**.
@@ -300,12 +258,6 @@ Although the current version is complete, KEMET can be extended in the future wi
 
 ---
 
-# 📸 Project Preview
-
-> Screenshots and a visual showcase can be added here to demonstrate the main pages and interactions.
-
----
-
 # 🌐 Live Demo
 
 **KEMET — Explore Ancient Egypt**
@@ -314,13 +266,15 @@ Although the current version is complete, KEMET can be extended in the future wi
 
 ---
 
-# 👨‍💻 Author
-
-**Ahmed Abdelhamid**
-
-Frontend Developer | Software Engineering Student
-
-Interested in building interactive, responsive, and data-driven web experiences.
+# 👨‍💻 Author 
+ 
+**Ahmed Abdelhamid** 
+ 
+Frontend Developer | Software Engineering Student 
+ 
+Interested in building interactive, responsive, and data-driven web experiences. 
+ 
+🔗 **LinkedIn:** [Ahmed Abdelhamid](https://www.linkedin.com/in/ahmed-abdelhamid-b4905837b/)
 
 ---
 
