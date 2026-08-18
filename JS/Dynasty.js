@@ -61,7 +61,11 @@ Promise.all([
     document.getElementById("dynastyLink").innerHTML =`
      <a href="./Dynasty.js?dynasty-id=${Dynasty.id}" title="${Dynasty.name}" class="dynasty-link active-page link-underline link-underline-opacity-0">${Dynasty.name}</a>
     `
-  
+   
+    document.getElementById("title").innerHTML =`
+      ${Dynasty.name} | KEMET
+    `
+
     //=============hero=============//
     let hero_content = document.querySelector(".hero-content");
     let details = document.querySelector(".details-row");

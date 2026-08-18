@@ -47,11 +47,14 @@ Promise.all([
 
     //===========heder===========//
 
-
     document.getElementById("eraLink").innerHTML = `
     <a href="./Dynasties.html?id=${era.id}" title="${era.name}" class="era-link active-page link-underline link-underline-opacity-0">${era.name}</a>
      `
-
+    
+     document.getElementById("title").innerHTML = `
+      ${era.name} | KEMET
+     `
+  
     //=============hero=============//
     
     let content_hero = document.getElementById("inerr-content")

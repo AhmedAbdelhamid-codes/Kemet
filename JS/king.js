@@ -60,6 +60,10 @@ Promise.all([
     document.getElementById("kingLing").innerHTML =`
      <a href="./king.html?king-id=${king.id}" title="${king.name}" class="king-link active-page link-underline link-underline-opacity-0">${king.name}</a>
     `
+
+    document.getElementById("title").innerHTML = `
+      الملك ${king.name} | KEMET
+    `
     //============hero================//
 
     document.getElementById("horo-row").innerHTML=`
