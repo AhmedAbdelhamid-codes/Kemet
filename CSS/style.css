@@ -16,7 +16,6 @@
     --obsidian-light: #2A2015;
     --obsidian: #1A1209;
     --obsidian-dark: #0D0A05;
-
     /* Papyrus */
     --papyrus-light: #FAF0DC;
     --papyrus: #F5E6C8;
@@ -188,6 +187,13 @@ transform: translateX(-2px);
   color: var(--sand-light);
 }
 
+/* in kings page */
+
+.my-nav .kings-link.active-page{
+  font-size: 10px;
+  color: var(--sand-light);
+}
+
 /*=========الصفحة الرئسية==============*/
 
 .main-page_body{
@@ -196,10 +202,16 @@ transform: translateX(-2px);
    var(--obsidian-dark);
 }
 
-/*=========الصفحة العصور==============*/
+/*=========صفحة العصور==============*/
 
 .eras-page_body{
  background-color: var(--obsidian-dark);
+}
+
+/*=========صفحة الملك==============*/
+
+.king-page_body{
+  background-color: #1a1209;
 }
 
 /* ═══════════════════════════════════════
@@ -264,6 +276,34 @@ transform: translate(-50%,-40px);
 }
 
 /* ═══════════════════════════════════════
+       msg
+═══════════════════════════════════════ */
+.msg{
+  top: 30px;
+  right: 40px;
+  background-color:#1F4E79;
+  border-radius: 40px;
+  padding: 10px 20px;
+  color: var(--papyrus);
+  transition: var(--trans);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.msg .close{
+  background-color: transparent;
+  border: 0px solid black;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.showMsg{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ═══════════════════════════════════════
        HERO for main page
 ═══════════════════════════════════════ */
 .hero .content-top img{
@@ -286,7 +326,7 @@ animation:fadeUp 1s 0.4s ease both;
 
 .hero .content-top .btn-journey{
 background-color: var(--sand-dark);
-padding: 15px 40px;
+padding: 15px 30px;
 border-radius: 60px;
 transition: var(--trans);
 animation:fadeUp 1s 0.5s ease both;
@@ -294,7 +334,18 @@ animation:fadeUp 1s 0.5s ease both;
 
 .hero .content-top .btn-journey:hover{
 background-color: var(--sand-light);
-transform: translateY(-4px);
+}
+
+.hero .content-top .whyKemet-btn{
+background-color: var(--sand-light);
+padding: 15px 30px;
+border-radius: 60px;
+transition: var(--trans);
+animation:fadeUp 1s 0.5s ease both;
+}
+
+.hero .content-top .whyKemet-btn:hover{
+background-color: var(--sand-dark);
 }
 
 .hero-scroll{
@@ -352,7 +403,7 @@ width: 100%;
 .line{
   width: 100%;
   height: 1px;
-  background-color: var(--papyrus-light);
+  background: linear-gradient(to left,transparent,var(--gold),transparent);
   border-radius: 100px;
 }
 
@@ -360,8 +411,23 @@ width: 100%;
      EXPLOR SEC for main page
 ═══════════════════════════════════════ */
 
-.explor .content-bottom .sub-tittle{
+.explor::before{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to left,transparent,#c9a84c86,transparent);
+
+}
+
+.explor .content-bottom .tittle-explor{
   color: var(--papyrus);
+}
+
+.explor .content-bottom .sub-tittle_explor{
+  color: var(--sand-light);
+  font-weight: 300;
 }
 
 .explor .content-bottom .card-animation{
@@ -441,14 +507,6 @@ position: relative;
   color: var(--gold);
 }
 
-/* ═══════════════════════════════════════
-     footer for main page
-═══════════════════════════════════════ */
-
-footer span{
-  letter-spacing: 4px;
-  color: #b88a2e3c;
-}
 
 /* ═══════════════════════════════════════
      ERAS PAGE
@@ -1543,6 +1601,8 @@ content: none;
   border: 1px solid #c9a84c2e;
   transition: var(--trans);
   cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
 
 .kings-sec .card:hover {
@@ -1876,14 +1936,23 @@ padding: 10px;
 ═══════════════════════════════════════ */
 
 .hero-king{
-  background-color: #1a1209;
   height: 100vh;
+}
+
+.hero-king::before{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left,transparent,#c9a84c86,transparent);
 }
 
 .hero-king .imge{
 flex-shrink: 1;
 width: 100%;
 height: 400px;
+animation:fadeUp 1s 0.2s ease both;
 }
 
 .hero-king .imge img{
@@ -1908,6 +1977,7 @@ height: 50%;
 .hero-king .detailsKing .dynastyName{
   color: var(--gold);
   font-size: 12px;
+  animation:fadeUp 1s 0.3s ease both;
 }
 
 .hero-king .detailsKing .dynastyName::before{
@@ -1926,12 +1996,14 @@ height: 50%;
   font-family: "Amiri", serif;
   font-size: clamp(30px,4vw,60px);
   font-weight: 700;
+  animation:fadeUp 1s 0.4s ease both;
 }
 
 .hero-king .detailsKing .kingCoronationName{
   color: var(--gold);
   font-family: "Amiri", serif;
   font-size: 20px;
+  animation:fadeUp 1s 0.5s ease both;
 }
 
 .hero-king .detailsKing .overview{
@@ -1939,6 +2011,7 @@ height: 50%;
  width: 400px;
  line-height: 2;
  font-weight: 300;
+ animation:fadeUp 1s 0.6s ease both;
 }
 
 .hero-king .detailsKing .overview::before{
@@ -1965,6 +2038,7 @@ color: var(--sand-light);
 font-weight: 300;
 border: 1px solid var(--border);
 border-radius: 40px;
+animation:fadeUp 1s 0.7s ease both;
 }
 
 .hero-king .detailsKing li .bold{
@@ -1982,13 +2056,351 @@ font-weight: bold;
  border-radius: 40px;
  font-weight: 300;
  transition: var(--trans);
+ animation:fadeUp 1s 0.7s ease both;
 }
 
 .hero-king .detailsKing .dynastyLink:hover{
   background-color: var(--lapis);
 }
 
+/*==================description King sec=============================*/
 
+.anmationDescription{
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.sympol{
+  color: var(--gold-dark);
+}
+
+.descriptionKing::before{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left,transparent,#c9a84c86,transparent);
+}
+
+.descriptionKing .descriptionHeader{
+  color: var(--sand-light);
+  font-family: "Amiri", serif;
+  font-size:40px ;
+}
+
+.descriptionKing .descriptionContent{
+  background-color: var(--papyrus);
+  padding: 20px;
+}
+
+.descriptionKing .descriptionContent .descriptionInner{
+  border: 2px dashed var(--border);
+  padding: 20px;
+}
+
+.descriptionKing .descriptionContent .descriptionInner h3{
+ font-size: 20px;
+ line-height: 2;
+}
+
+/*=================achievements King sec======================*/
+
+.anmationAchievement{
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.achievementsKing .achievementsHeader{
+  color: var(--sand-light);
+  font-family: "Amiri", serif;
+  font-size:40px ;
+}
+
+.achievementsKing .achievementsCards .card{
+  background-color: var(--lapis-dark);
+  border: 1px solid var(--border);
+  padding: 20px;
+  height: 100%;
+  z-index: 2;
+  transition: var(--trans);
+}
+
+.achievementsKing .achievementsCards .card:hover{
+  border: 1px solid var(--gold);
+  transform: translateY(-3px);
+}
+
+.achievementsKing .achievementsCards .card .achievementTitle{
+  color: var(--gold-dark);
+  font-family: "Amiri", serif;
+  font-size: 22px;
+}
+
+.achievementsKing .achievementsCards .card .achievementDescription{
+  color: var(--gold-light);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/*=============kings page==============*/
+
+.hero-kings::before{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left,transparent,#c9a84c86,transparent);
+}
+
+.hero-kings .who::before{
+content: "";
+position: absolute;
+right: 0px;
+top: 50%;
+transform: translateY(-50%);
+height: 100%;
+width: 1px;
+background-color: var(--gold);
+}
+
+.hero-kings .who .date{
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 300;
+  animation:fadeUp 1s 0.2s ease both;
+}
+
+.hero-kings .who .date::before{
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.hero-kings .who .title{
+  color: var(--papyrus);
+  font-size: clamp(40px,4vw,60px);
+  font-weight: bold;
+  line-height: 1.2;
+  animation:fadeUp 1s 0.3s ease both;
+}
+
+.hero-kings .who .sub-title{
+  color: var(--gold-dark);
+  font-size: clamp(40px,4vw,60px);
+  font-weight: bold;
+  animation:fadeUp 1s 0.4s ease both;
+}
+
+.hero-kings .who .overview{
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 300;
+  animation:fadeUp 1s 0.5s ease both;
+}
+
+.hero-kings img{
+  z-index: 2;
+  animation:fadeUp 1s 0.4s ease both;
+  width: 400px;
+  height: 600px;
+}
+
+@media (max-width : 991px) {
+.hero-kings .who{
+margin-top: 120px;
+}
+.hero-kings img{
+  z-index: 2;
+  animation:fadeUp 1s 0.4s ease both;
+  width: 400px;
+  height: 600px;
+}
+}
+
+/*============kings sec=========== */
+
+.kings-sec .sec-header span{
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.kings-sec .sec-header h2{
+  font-family: "Amiri", serif;
+  color: var(--papyrus);
+  font-size: 30px;
+}
+
+/* ═══════════════════════════════════════
+     footer sec 
+═══════════════════════════════════════ */
+
+.kemet-footer{
+  position:relative;
+  color:var(--gold-light);
+  height: auto;
+  border-top: 2px solid var(--border);
+}
+
+.footer-links a,
+.journey-chain a,
+.dynastiesBtn{
+  display: inline-block;
+  color:var(--sand);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:400;
+  position:relative;
+  padding-right:0;
+  transition: var(--trans);
+}
+
+.footer-links a:hover,
+.journey-chain a:hover,
+.dynastiesBtn:hover{
+  transform: translateX(-3px);
+  color: var(--sand-light);
+}
+
+.footer-links a::before,
+.journey-chain a::before,
+.dynastiesBtn::before{
+  content:"—";
+  color:var(--gold);
+  margin-left:8px;
+}
+
+/* =======eyebrow / column headings=======*/
+.col-eyebrow{
+  font-family: "Amiri", serif;    
+  font-weight:700;
+  font-size: 20px;
+  margin-bottom:22px;
+  position:relative;
+  padding-bottom: 9px;
+}
+
+.col-eyebrow::after{
+  content:"";
+  position:absolute;
+  bottom:0; 
+  right:0;
+  width:32px;
+  height:2px;
+  background:linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* =========brand block======== */
+.brand-name{
+  font-family:'Cinzel',serif;
+  font-weight:600;
+  font-size:40px;
+  letter-spacing: 8px;
+  color: var(--gold);
+  line-height:1;
+}
+
+.brand-tagline{
+  font-size:18px;
+  font-weight:400;
+  color:var(--sand);
+}
+
+.brand-desc{
+  font-size:15px;
+  line-height:1.9;
+  color:var(--gold-light);
+  font-weight: 300;
+}
+
+.brand-divider{
+  width:70%;
+  height:1px;
+  background:linear-gradient(90deg, var(--gold), transparent);
+  margin-bottom: 20px;
+}
+
+/* =======nav links========*/
+
+.footer-links li{ 
+  margin-bottom:13px; 
+}
+
+/* ========journey chain======= */
+
+.journey-chain li{
+  position:relative;
+  margin-bottom:13px;
+}
+
+/* ========= social icons ==========*/
+
+.social-row{
+  display:flex;
+  gap:12px;
+  margin-top:6px;
+  flex-wrap:wrap;
+}
+
+.social-btn{
+  width:42px; 
+  height:42px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold);
+  font-size:18px;
+  text-decoration:none;
+  transition: var(--trans) ;
+  background:rgba(201,162,75,.04);
+}
+
+.social-btn:hover{
+  background:var(--gold);
+  color:var(--obsidian-dark);
+  border-color:var(--gold);
+  box-shadow:0 0 16px rgba(233,201,119,.35);
+}
+
+/* ======== bottom bar =========== */
+.footer-bottom{
+  margin-top:48px;
+  border-top:1px solid rgba(201,162,75,.18);
+  padding:20px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:13px;
+  color:var(--sand-light);
+  font-weight: 200;
+  padding-inline:28px;
+}
+
+.footer-bottom .credit strong{
+  color:var(--gold);
+  font-weight:600;
+}
+
+@media (max-width:991px){
+.brand-desc{ 
+  max-width:100%; 
+}
+.footer-bottom{ 
+flex-direction:column; 
+text-align:center; 
+}
+}
 
 
 

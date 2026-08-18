@@ -50,3 +50,18 @@ let observer = new IntersectionObserver(function(entries){
 cards.forEach(function(card , index){
     observer.observe(card)
 });
+
+let antiquitiesBtn = document.getElementById("antiquitiesBtn");
+
+let antiquitiesMsg = document.getElementById("antiquitiesMsg");
+
+let closeAntiquitiesMsg = document.getElementById("closeAntiquitiesMsg");
+
+antiquitiesBtn.addEventListener("click",function(){
+ antiquitiesMsg.classList.add("showMsg")
+})
+
+closeAntiquitiesMsg.addEventListener("click",function(){
+ antiquitiesMsg.classList.remove("showMsg")
+})
+

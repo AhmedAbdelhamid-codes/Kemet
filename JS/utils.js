@@ -9,11 +9,10 @@ let btn_up_body = document.getElementById("btn-up_body")
 
 window.addEventListener("scroll",function(){
   
-  window.scrollY > 200 && window.scrollY < 3500? btn_up_body.classList.add("show") : btn_up_body.classList.remove("show") 
+  window.scrollY > 200? btn_up_body.classList.add("show") : btn_up_body.classList.remove("show") 
   
 })
 
-if(btn_up_body){
 btn_up_body.addEventListener("click",function(){
        
       window.scrollTo({
@@ -21,7 +20,7 @@ btn_up_body.addEventListener("click",function(){
         behavior: "smooth"
       })
 })
-}
+
 
 // get file json
 
@@ -65,3 +64,34 @@ function getdata (url){
 
 //     });
 // }
+
+
+document.addEventListener("DOMContentLoaded",function(){
+
+let portfolioBtn = document.getElementById("portfolioBtn");
+let dynastiesBtn = document.getElementById("dynastiesBtn");
+
+let portfolioMsg = document.getElementById("portfolioMsg");
+let dynastiesMsg = document.getElementById("dynastiesMsg");
+
+let closePortfolioMsg = document.getElementById("closePortfolioMsg");
+let closedynastiesMsg = document.getElementById("closedynastiesMsg");
+
+
+portfolioBtn.addEventListener("click",function(){
+ portfolioMsg.classList.add("showMsg")
+})
+
+closePortfolioMsg.addEventListener("click",function(){
+ portfolioMsg.classList.remove("showMsg")
+})
+
+dynastiesBtn.addEventListener("click",function(){
+ dynastiesMsg.classList.add("showMsg")
+})
+
+closedynastiesMsg.addEventListener("click",function(){
+ dynastiesMsg.classList.remove("showMsg")
+})
+})
+

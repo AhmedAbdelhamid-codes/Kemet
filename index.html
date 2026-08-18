@@ -34,10 +34,26 @@
   <i class="fa-solid fa-arrow-up position-absolute icon2"></i>
 </button>
 
-    
+<!--=================msgs================== -->
+
+<div id="antiquitiesMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closeAntiquitiesMsg" class="close">X</button>
+      لم يتم تجهيز صفحة الاثار
+</div>
+
+<div id="portfolioMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closePortfolioMsg" class="close">X</button>
+    أنا لسه بجهز الـ Portfolio الخاص بيا.
+</div>
+
+<div id="dynastiesMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closedynastiesMsg" class="close">X</button>
+    لم يتم تجهيز صفحة بها كل الاسر ولكن يمكنك ان تدخل الي اي عصر وتختار اسر هذا العصر
+</div>
+
 <svg id="egypt-bg"></svg>
 
-<main class="">
+<main class=" mb-5">
 <div class="container">
 
   <!--=========start hero========= -->
@@ -46,10 +62,15 @@
    <img src="./phots/logo.png" width="605px" height="375px" alt="">
    <h1 class="tittle fw-bold text-center">رحلة عبر آلاف السنين من الحضارة الفرعونية</h1>
    <p class="pt-3 paragraph text-center">من فجر الأسرات إلى نهاية العصر البطلمي — استكشف الملوك والأسرات والآثار التي شكّلت أعظم حضارة في التاريخ</p>
-    <a href="./Eras.html" class="btn-journey btn d-flex align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
-      ابدأ الرحلة
-       <i class="fa-solid fa-ankh"></i>
-    </a> 
+    <div class="explore-btns d-flex justify-content-center align-items-center gap-lg-3 gap-0 flex-wrap">
+       <a href="./Eras.html" class="btn-journey btn d-flex align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
+        ابدأ الرحلة
+        <i class="fa-solid fa-ankh"></i>
+      </a> 
+       <a href="./whyKemet.html" class="whyKemet-btn btn d-flex justify-content-center align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
+         لماذا كميت؟   
+      </a> 
+    </div>
    <div class="hero-scroll position-absolute d-flex justify-content-center  flex-column ">
       <div class="hero-scroll-shape border rounded-4 border-2 border-white" style="width: 25px; height: 45px;"></div>
       <div class="hero-scroll-dott position-absolute border rounded-4 border-0"></div>
@@ -65,10 +86,10 @@
 <!--=========end line========= -->
 
 <!--=========start explor========= -->
-<section class="explor pt-5" >
+<section class="explor vh-100 pt-5 position-relative" >
 <div class="content-bottom">
-<h2 class="sub-tittle pb-5 text-center">اختر مسارك الاستكشافي</h2>
-  
+<h2 class="tittle-explor pb-2 text-center">اختر مسارك الاستكشافي</h2>
+<h3 class="sub-tittle_explor pb-5 text-center fs-5">استكشف بلا ترتيب</h3>
 <!-- ===========cards============= -->
  
  <div class="cards d-flex justify-content-center align-content-center gap-5 flex-wrap">
@@ -77,7 +98,7 @@
 
    <div class="card-animation"> 
      <div class="card rounded-5 bg-black" >
-       <a href="" class="rounded-5 w-100"  >
+       <a href="./kings.html" class="rounded-5 w-100"  >
         <div class="imge position-relative rounded-5 overflow-hidden w-100">
             <img src="./phots/751eca270b7991328edf7044e099b576.jpg" style="width: 360px; height:475px;" class=" z-1 rounded-5 w-100"  alt="">
             <div class="overlay position-absolute z-3">
@@ -97,18 +118,18 @@
     
    <div class="card-animation">
       <div  class="card rounded-5 bg-black">
-       <a href="" class="rounded-5 w-100"  >
+       <button id="antiquitiesBtn" class="rounded-5 border border-0 w-100"  >
          <div class="imge position-relative rounded-5 overflow-hidden w-100">
             <img src="./phots/اثار.jpg"  alt="" class="z-1 rounded-5 w-100" style="width: 360px; height:475px;">
             <div class="overlay position-absolute z-3">
-                <h2 class="card-tittle fw-bold text-white" >الآثار المكتشفة</h2>
-                <p class="card-paragraph fw-light mb-2">استكشف تفاصيل الآثار المصرية النادرة، من تاريخ اكتشافها إلى أسرار تصميمها، في عرض تفاعلي يربط كل قطعة بسياقها التاريخي والجغرافي.</p>
+                <h2 class="card-tittle fw-bold text-white text-start" >الآثار المكتشفة</h2>
+                <p class="card-paragraph fw-light mb-2 text-start">استكشف تفاصيل الآثار المصرية النادرة، من تاريخ اكتشافها إلى أسرار تصميمها، في عرض تفاعلي يربط كل قطعة بسياقها التاريخي والجغرافي.</p>
                 <span class="link fw-light d-flex align-items-center gap-2" >عرض الآثار
                      <i class="fa-solid fa-arrow-left icon"></i>
                 </span>
             </div>
          </div>
-        </a>
+        </button>
       </div>
     </div> 
 
@@ -120,14 +141,69 @@
 
 <!-- footer -->
 
-<footer class="text-center pt-5 pb-4 position-relative">
-<div class="container">
-<span class="d-block fs-3 mb-2">—  𓆸  𓇳  𓆸  —</span>
-<span class="d-block" style="font-size: 13px;">٣١٠٠ ق.م — ٣٠ ق.م</span>
-</div>
+<footer class="kemet-footer pt-5">
+  <div class="container">
+    <div class="row gy-5">
+
+      <!-- BRAND -->
+      <div class="col-12 col-lg-3">
+        <h2 class="brand-name">KEMET</h2>
+        <p class="brand-tagline">رحلة عبر تاريخ مصر القديمة</p>
+        <div class="brand-divider"></div>
+        <p class="brand-desc">اكتشف تاريخ مصر القديمة من خلال رحلة منظمة عبر العصور والأسر والملوك.</p>
+      </div>
+
+      <!-- استكشف كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">استكشف كميت</h2>
+        <ul class="footer-links list-unstyled">
+          <li><a href="./index.html">الرئيسية</a></li>
+          <li><a href="./Eras.html">ابدأ الرحلة</a></li>
+          <li><a href="./Eras.html">العصور</a></li>
+          <li><a href="./whyKemet.html">لماذا كميت؟</a></li>
+        </ul>
+      </div>
+
+      <!-- رحلة كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">رحلة كميت</h2>
+        <ul class="journey-chain list-unstyled">
+          <li><a href="./Eras.html">العصور</a></li>
+          <li><button id="dynastiesBtn" class="dynastiesBtn bg-transparent border border-0" href="#">الأسر</button></li>
+          <li><a href="./kings.html">الملوك</a></li>
+          <li><a href="./king.html?king-id=1805">صفحة الملك</a></li>
+        </ul>
+      </div>
+
+      <!-- عن كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">عن كميت</h2>
+        <ul class="footer-links list-unstyled">
+          <li><a href="./whyKemet.html">لماذا كميت؟</a></li>
+          <li><a href="./whyKemet.html#HOW">كيف تستخدم كميت؟</a></li>
+        </ul>
+      </div>
+
+      <!--تواصل معي -->
+      <div class="col-6 col-lg-3">
+        <h2 class="col-eyebrow">تواصل معي</h2>
+        <div class="social-row">
+          <a href="https://github.com/AhmedAbdelhamid-codes" class="social-btn" title="GitHub" target="_parent" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ahmed-abdelhamid-b4905837b/" class="social-btn" title="LinkedIn" target="_parent" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/ahmed.abdelhameed.1806253?locale=ar_AR" class="social-btn" title="facebook" target="_parent" aria-label="facebook"><i class="fa-brands fa-facebook"></i></a>
+          <button id="portfolioBtn"  class="social-btn" title="Portfolio" target="_parent" aria-label="Portfolio"><i class="fa-solid fa-globe"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <span>© 2026 KEMET — جميع الحقوق محفوظة</span>
+    <span class="credit">صُمم وطُوّر بواسطة <strong>أحمد عبدالحميد</strong></span>
+  </div>
+  </div>
 </footer>
-
-
 
 
 <script src="./JS/bootstrap.bundle.min.js"></script>

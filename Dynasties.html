@@ -37,7 +37,18 @@
   <i class="fa-solid fa-arrow-up position-absolute icon2"></i>
 </button>
 
-    
+<!--=================msgs================== -->
+
+<div id="portfolioMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closePortfolioMsg" class="close">X</button>
+    أنا لسه بجهز الـ Portfolio الخاص بيا.
+</div>
+
+<div id="dynastiesMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closedynastiesMsg" class="close">X</button>
+    لم يتم تجهيز صفحة بها كل الاسر ولكن يمكنك ان تدخل الي اي عصر وتختار اسر هذا العصر
+</div>
+
 <svg id="egypt-bg"></svg>
 
 <header class="">
@@ -138,13 +149,70 @@
 </main>
 
 <!-- footer -->
-<!-- 
-<footer class="text-center pt-5 pb-4 position-relative">
-<div class="container">
-<span class="d-block fs-3 mb-2">—  𓆸  𓇳  𓆸  —</span>
-<span class="d-block" style="font-size: 13px;">٣١٠٠ ق.م — ٣٠ ق.م</span>
-</div>
-</footer> -->
+
+<footer class="kemet-footer pt-5">
+  <div class="container">
+    <div class="row gy-5">
+
+      <!-- BRAND -->
+      <div class="col-12 col-lg-3">
+        <h2 class="brand-name">KEMET</h2>
+        <p class="brand-tagline">رحلة عبر تاريخ مصر القديمة</p>
+        <div class="brand-divider"></div>
+        <p class="brand-desc">اكتشف تاريخ مصر القديمة من خلال رحلة منظمة عبر العصور والأسر والملوك.</p>
+      </div>
+
+      <!-- استكشف كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">استكشف كميت</h2>
+        <ul class="footer-links list-unstyled">
+          <li><a href="./index.html">الرئيسية</a></li>
+          <li><a href="./Eras.html">ابدأ الرحلة</a></li>
+          <li><a href="./Eras.html">العصور</a></li>
+          <li><a href="./whyKemet.html">لماذا كميت؟</a></li>
+        </ul>
+      </div>
+
+      <!-- رحلة كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">رحلة كميت</h2>
+        <ul class="journey-chain list-unstyled">
+          <li><a href="./Eras.html">العصور</a></li>
+          <li><button id="dynastiesBtn" class="dynastiesBtn bg-transparent border border-0" href="#">الأسر</button></li>
+          <li><a href="./kings.html">الملوك</a></li>
+          <li><a href="./king.html?king-id=1805">صفحة الملك</a></li>
+        </ul>
+      </div>
+
+      <!-- عن كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">عن كميت</h2>
+        <ul class="footer-links list-unstyled">
+          <li><a href="./whyKemet.html">لماذا كميت؟</a></li>
+          <li><a href="./whyKemet.html#HOW">كيف تستخدم كميت؟</a></li>
+        </ul>
+      </div>
+
+      <!--تواصل معي -->
+      <div class="col-6 col-lg-3">
+        <h2 class="col-eyebrow">تواصل معي</h2>
+        <div class="social-row">
+          <a href="https://github.com/AhmedAbdelhamid-codes" class="social-btn" title="GitHub" target="_parent" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ahmed-abdelhamid-b4905837b/" class="social-btn" title="LinkedIn" target="_parent" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/ahmed.abdelhameed.1806253?locale=ar_AR" class="social-btn" title="facebook" target="_parent" aria-label="facebook"><i class="fa-brands fa-facebook"></i></a>
+          <button id="portfolioBtn"  class="social-btn" title="Portfolio" target="_parent" aria-label="Portfolio"><i class="fa-solid fa-globe"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <span>© 2026 KEMET — جميع الحقوق محفوظة</span>
+    <span class="credit">صُمم وطُوّر بواسطة <strong>أحمد عبدالحميد</strong></span>
+  </div>
+  </div>
+</footer>
 
 
 <script src="./JS/bootstrap.bundle.min.js"></script>

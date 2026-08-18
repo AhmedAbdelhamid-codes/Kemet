@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="لماذا كميت؟ رحلة رقمية لاكتشاف تاريخ مصر القديمة.">
+  
+   <!--======title-for-website====== -->
+   <title>لماذا كميت؟ | KEMET</title>
+  
+  <!--=======link css======-->
+   <link rel="stylesheet" href="./CSS/bootstrap.rtl.min.css">
+   <link rel="stylesheet" href="./CSS/whyKemet.css">
+
+  <!-- font awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <!--========goagle fonts=======-->
+     <!-- for tittle -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     <!-- for body -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+     <!-- for liten number -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+     <!-- for whyKemet page -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============to top for body=========== -->
+
+<button class="btn-up_body z-3 position-fixed overflow-hidden" id="btn-up_body">
+  <i class="fa-solid fa-arrow-up position-absolute icon"></i>
+  <i class="fa-solid fa-arrow-up position-absolute icon2"></i>
+</button>
+
+<div id="portfolioMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closePortfolioMsg" class="close">X</button>
+    أنا لسه بجهز الـ Portfolio الخاص بيا.
+</div>
+
+<div id="dynastiesMsg" class="msg position-fixed z-3 d-flex justify-content-center align-items-center gap-3">
+    <button id="closedynastiesMsg" class="close">X</button>
+    لم يتم تجهيز صفحة بها كل الاسر ولكن يمكنك ان تدخل الي اي عصر وتختار اسر هذا العصر
+</div>
+
+  <header>
+   <nav class="navbar navbar-expand-lg kemet-nav" aria-label="التنقل الرئيسي">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="فتح القائمة"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="./index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#journey">رحلة كميت</a></li>
+          <li class="nav-item"><a class="nav-link" href="#explore">ماذا ستجد؟</a></li>
+          <li class="nav-item"><a class="nav-link" href="#creator">من وراء كميت؟</a></li>
+          <li class="nav-item"><a class="nav-journey link-underline link-underline-opacity-0 d-inline-flex gap-2 align-items-center ms-3" href="./Eras.html">ابدأ الرحلة <i class="fa-solid fa-arrow-left-long icon"></i></a></li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="./index.html"><img src="./phots/logo.png" alt="KENET" width="200px" height="100px"></a>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container position-relative">
+        <div class="row min-vh-100 align-items-center">
+          <div class="col-lg-8 col-xl-7">
+            <p class="eyebrow reveal">بوابة إلى مصر القديمة</p>
+            <h1 class="display-title reveal">لماذا <em>كميت؟</em></h1>
+            <p class="hero-copy reveal">رحلة رقمية لاكتشاف تاريخ مصر القديمة، عصرًا بعد عصر.</p>
+            <p class="hero-line reveal mt-3">حين يتحول التاريخ من صفحات متفرقة إلى رحلة تستحق الاكتشاف.</p>
+            <a class="gold-button reveal d-inline-flex align-items-center gap-2 link-underline link-underline-opacity-0" href="#journey">اكتشف الحكاية <i class="fa-solid fa-arrow-down icon"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-edge" aria-hidden="true"></div>
+    </section>
+
+    <section class="section why-section" id="journey">
+      <div class="container">
+        <div class="row justify-content-between align-items-center g-5">
+          <div class="col-lg-5">
+            <div class="section-heading reveal">
+                <p class="eyebrow">فكرة كميت</p>
+                <h2>التاريخ ليس مجرد <em>معلومات</em></h2>
+                <p class="description">كميت ليست مجموعة مقالات تاريخية؛ إنها محاولة لترتيب تاريخ مصر القديمة في رحلة بصرية مترابطة. في كل محطة، تعرف إلى ما سبقها وما يقودك بعدها.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hierarchy reveal" aria-label="العصر ثم الأسرة ثم الملك ثم صفحة الملك">
+            <div class="hierarchy-node">
+                <span>01</span>
+                <strong>العصر</strong>
+                <small>بداية الحكاية</small>
+             </div>
+            <div class="hierarchy-link">
+                <i class="fa-solid fa-angle-down"></i>
+             </div>
+            <div class="hierarchy-node">
+                <span>02</span>
+                <strong>الأسرة</strong>
+                <small>سلالة تحكم مصر</small>
+            </div>
+            <div class="hierarchy-link">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="hierarchy-node">
+                <span>03</span>
+                <strong>الملك</strong>
+                <small>شخصيات صنعت التاريخ</small>
+            </div>
+            <div class="hierarchy-link">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="hierarchy-node final">
+                <span>04</span>
+                <strong>صفحة الملك</strong>
+                <small>تفاصيل أكثر عمقًا</small>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="HOW">
+      <div class="container">
+        <div class="section-heading mx-auto reveal">
+            <p class="eyebrow">دليل الرحلة</p>
+            <h2>كيف تستخدم <em>كميت؟</em></h2>
+            <p class="description">اتبع خيط التاريخ من أوسع صورة إلى أدق التفاصيل.</p>
+        </div>
+        <div class="steps-wrap">
+          <div class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+                <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3>ابدأ الرحلة</h3>
+            <p>ابدأ من الخط الزمني واستكشف العصور في تاريخ مصر القديمة.</p>
+        </div>
+          <div class="step-card reveal">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+                <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <h3>اختر العصر</h3>
+            <p>تعرّف إلى الفترة التاريخية ووصفها وخصائصها والأسر التي عاشت فيها.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+             <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h3>اكتشف الأسر</h3>
+            <p>استكشف الأسر الحاكمة ضمن العصر المختار وتعرّف إلى كل أسرة.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">04</div>
+            <div class="step-icon">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3>تعرّف على الملوك</h3>
+            <p>ادخل إلى الأسرة لاكتشاف ملوكها وصفحات الملوك المهمة وإنجازاتهم.</p>
+         </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section explore-section" id="explore">
+        <div class="container">
+             <div class="section-heading reveal mb-5">
+                <p class="eyebrow">محتوى الرحلة</p>
+                <h2>ماذا ستجد في <em>كميت؟</em></h2>
+                <p class="description">كل ما تحتاجه لتسير في التاريخ المصري القديم بخطوات واضحة ومتصلة.</p>
+             </div>
+            <div class="row g-3">
+             <div class="col-md-6 reveal">
+                <div class="explore-card">
+                    <span>01</span>
+                    <h3>العصور</h3>
+                    <p>استكشف العصور التاريخية الكبرى في مصر القديمة، وتعرّف إلى تسلسلها وخصائصها.</p>
+                </div>
+            </div>
+             <div class="col-md-6 reveal">
+                <div class="explore-card">
+                    <span>02</span>
+                    <h3>الأسر الحاكمة</h3>
+                    <p>اكتشف الأسر التي حكمت مصر خلال كل عصر من عصورها التاريخية.</p>
+                </div>
+            </div>
+             <div class="col-md-6 reveal">
+                <div class="explore-card">
+                    <span>03</span>
+                    <h3>الملوك</h3>
+                    <p>تعرّف إلى الملوك الذين ينتمون إلى كل أسرة حاكمة.</p>
+                </div>
+            </div>
+             <div class="col-md-6 reveal">
+                <div class="explore-card">
+                    <span>04</span>
+                    <h3>صفحات الملوك</h3>
+                    <p>افتح صفحات مخصصة للملوك المهمين وتعمّق في حياتهم وحكمهم وإنجازاتهم.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section creator-section" id="creator">
+        <div class="container">
+            <div class="creator-frame reveal">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center">
+                    <img src="./phots/ahmed.jpeg" alt="">
+                    <p class="emblem-caption mt-2">Ahmed Abdelhamid</p>
+                </div>
+                <div class="col-lg-7">
+                <div class="section-heading">
+                    <p class="eyebrow">القصة خلف المشروع</p>
+                    <h2>من وراء <em>كميت؟</em></h2>
+                    <p class="creator-intro">أنا أحمد، طالب في كلية الحاسبات والمعلومات جامعة اسيوط ومطور Front-End.</p>
+                    <p>بدأت كميت كمشروع يجمع بين شغفي بالتاريخ المصري القديم وتعلمي لتطوير الويب، بهدف تقديم التاريخ بطريقة منظمة، بصرية، وسهلة الاستكشاف.</p>
+                    <p class="signature">كميت مشروع مستقل من تصميم وتطوير أحمد.</p>
+                </div>
+                <div class="social-links mt-4" aria-label="روابط أحمد">
+                    <a href="https://github.com/AhmedAbdelhamid-codes" target="_blank" title="GitHub" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahmed-abdelhamid-b4905837b/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ahmed.abdelhameed.1806253?locale=ar_AR" target="_blank" title="Facebook" aria-label="Facebook">
+                       <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <button id="portfolioBtn" class="portfolioBtn" title="portfolio" aria-label="portfolio">
+                        <i class="fa-solid fa-globe"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="final-cta">
+   <div class="container text-center position-relative">
+     <p class="eyebrow reveal">حان وقت البداية</p>
+     <h2 class="reveal">رحلتك في كميت <em>تبدأ من هنا</em></h2>
+     <p class="reveal">اكتشف آلاف السنين من التاريخ المصري، عصرًا بعد عصر.</p>
+     <a class="gold-button reveal link-underline link-underline-opacity-0 d-inline-flex justify-content-center align-items-center gap-2" href="./Eras.html">ابدأ الرحلة <i class="fa-solid fa-arrow-left-long"></i></a>
+  </div>
+ </section>
+</main>
+
+ <!-- footer -->
+
+<footer class="kemet-footer pt-5">
+  <div class="container">
+    <div class="row gy-5">
+
+      <!-- BRAND -->
+      <div class="col-12 col-lg-3">
+        <h2 class="brand-name">KEMET</h2>
+        <p class="brand-tagline">رحلة عبر تاريخ مصر القديمة</p>
+        <div class="brand-divider"></div>
+        <p class="brand-desc">اكتشف تاريخ مصر القديمة من خلال رحلة منظمة عبر العصور والأسر والملوك.</p>
+      </div>
+
+      <!-- استكشف كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">استكشف كميت</h2>
+        <ul class="footer-links list-unstyled">
+          <li><a href="./index.html">الرئيسية</a></li>
+          <li><a href="./Eras.html">ابدأ الرحلة</a></li>
+          <li><a href="./Eras.html">العصور</a></li>
+          <li><a href="./whyKemet.html">لماذا كميت؟</a></li>
+        </ul>
+      </div>
+
+      <!-- رحلة كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">رحلة كميت</h2>
+        <ul class="journey-chain list-unstyled">
+          <li><a href="./Eras.html">العصور</a></li>
+          <li><button id="dynastiesBtn" class="dynastiesBtn bg-transparent border border-0" href="#">الأسر</button></li>
+          <li><a href="./kings.html">الملوك</a></li>
+          <li><a href="./king.html?king-id=1805">صفحة الملك</a></li>
+        </ul>
+      </div>
+
+      <!-- عن كميت -->
+      <div class="col-6 col-lg-2">
+        <h2 class="col-eyebrow">عن كميت</h2>
+        <ul class="footer-links list-unstyled">
+          <li><a href="./whyKemet.html">لماذا كميت؟</a></li>
+          <li><a href="./whyKemet.html#HOW">كيف تستخدم كميت؟</a></li>
+        </ul>
+      </div>
+
+      <!--تواصل معي -->
+      <div class="col-6 col-lg-3">
+        <h2 class="col-eyebrow">تواصل معي</h2>
+        <div class="social-row">
+          <a href="https://github.com/AhmedAbdelhamid-codes" class="social-btn" title="GitHub" target="_parent" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ahmed-abdelhamid-b4905837b/" class="social-btn" title="LinkedIn" target="_parent" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/ahmed.abdelhameed.1806253?locale=ar_AR" class="social-btn" title="facebook" target="_parent" aria-label="facebook"><i class="fa-brands fa-facebook"></i></a>
+          <button class="social-btn" title="Portfolio" target="_parent" aria-label="Portfolio"><i class="fa-solid fa-globe"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <span>© 2026 KEMET — جميع الحقوق محفوظة</span>
+    <span class="credit">صُمم وطُوّر بواسطة <strong>أحمد عبدالحميد</strong></span>
+  </div>
+  </div>
+</footer>
+
+   <script src="./JS/bootstrap.bundle.min.js"></script>
+   <script src="./JS/utils.js"></script>
+   <script src="./JS/whyKemet.js"></script>
+</body>
+</html>

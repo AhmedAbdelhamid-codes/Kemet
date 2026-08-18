@@ -185,8 +185,8 @@ Promise.all([
              `
         }else{
             cards+= `
-                   <div class="col item">
-    <div class="card">
+                <div class="col item">
+       <div class="card">
       <img src="${kings[i].image}" class="card-img-top" alt="${kings[i].name}">
       <div class="card-body d-flex flex-column">
         <div class="dtails d-flex justify-content-between align-items-center flex-wrap">
@@ -269,8 +269,6 @@ Promise.all([
       highPriests_cards.innerHTML = HP_cards
     }
 
-let items = document.querySelectorAll(".item")
-let HPs = document.querySelectorAll(".HP")
 
 //========btns sec for Dynasty page==========//
 
@@ -348,7 +346,7 @@ while (true) {
         } else {
 
             indexOfCrruntDynasty--;
-            PreviousDynasty = DynastiesData[indexOfCrruntDynasty];
+            PreviousDynasty = DynastiesData[indexOfCrruntDynasty - 1];
 
         }
 
@@ -391,14 +389,30 @@ pre_btn.addEventListener("click",function(){
 
 //===========anmation==============//
 
+let items = document.querySelectorAll(".item")
+let HPs = document.querySelectorAll(".HP")
+
 let observer = new IntersectionObserver(function(entries){
 
     entries.forEach(function(entry){
      if(entry.isIntersecting){
 
         if(entry.target.classList.contains("item")){
-            let index = Array.from(items).indexOf(entry.target)
-            entry.target.style.animation = `fadeUp 0.5s ${(index + 1) * 0.1}s ease both`
+                
+             let index = Array.from(items).indexOf(entry.target);
+                let columns;
+                if (window.innerWidth >= 992) {
+                    columns = 4;
+                } else if (window.innerWidth >= 768) {
+                    columns = 3;
+                } else if (window.innerWidth >= 576) {
+                    columns = 2;
+                } else {
+                    columns = 1;
+                }
+                let indexInRow = index % columns;
+                entry.target.style.animation =
+                `fadeUp 0.5s ${indexInRow * 0.05}s ease both`;
         }
         
         if(entry.target.classList.contains("HP")){
