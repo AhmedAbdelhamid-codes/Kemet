@@ -33,6 +33,22 @@
 }
 
 /* ═══════════════════════════════════════
+       scroll bar
+═══════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--papyrus);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
+
+/* ═══════════════════════════════════════
        RESET
 ═══════════════════════════════════════ */
 
@@ -2042,7 +2058,9 @@ font-weight: bold;
   font-weight: 300;
 }
 
-/*=============kings page==============*/
+/* ═══════════════════════════════════════
+       kings page
+═══════════════════════════════════════ */
 
 .hero-kings::before{
   content: "";
@@ -2110,6 +2128,7 @@ background-color: var(--gold);
   width: 400px;
   height: 600px;
 }
+
 
 /*============kings sec=========== */
 
@@ -2331,13 +2350,6 @@ text-align:center;
 margin-top: 120px;
 }
 
-.hero-kings img{
-  z-index: 2;
-  animation:fadeUp 1s 0.4s ease both;
-  width: 400px;
-  height: 600px;
-}
-
 .hero-Dynasties .description {
 width: 100%;
 }
@@ -2424,6 +2436,12 @@ content: none;
 @media (max-width : 466px) {
 .hero-king .detailsKing .overview{
  width: 100%;
+}
+
+.hero-kings img{
+ flex: 1 1;
+ width: 100%;
+ height: 50%;
 }
 }
 
