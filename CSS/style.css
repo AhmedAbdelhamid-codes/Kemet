@@ -2276,7 +2276,7 @@ background-color: var(--gold);
 
 .footer-bottom .credit strong{
   color:var(--gold);
-  font-weight:600;
+  font-weight:600 ;
 }
 
 /*=============responsve=============*/
