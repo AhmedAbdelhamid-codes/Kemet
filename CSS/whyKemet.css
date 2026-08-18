@@ -264,7 +264,6 @@ transform: translate(-50%,-40px);
   filter: invert(1);
 }
 
-
 /* ═══════════════════════════════════════
        hero sec
 ═══════════════════════════════════════ */
@@ -750,7 +749,6 @@ border-radius: 40px;
 .kemet-nav {
  background: rgba(9, 8, 6, 0.88);
  backdrop-filter: blur(12px);
- position: fixed;
  padding: 1rem 0;
 }
 
