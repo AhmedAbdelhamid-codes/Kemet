@@ -91,7 +91,7 @@ function setupStatsObserver(targetSection) {
     });
 
   },{
-    threshold: 0.75
+    threshold: 0.25
   });
 
   observer.observe(targetSection);
