@@ -27,6 +27,103 @@
 
 })();
 
+// ============================================//
+
+document.addEventListener('DOMContentLoaded', () => {
+  initKemetStats();
+});
+
+async function initKemetStats() {
+  const statsSection = document.getElementById('kemet-stats');
+  if (!statsSection) return;
+
+  await populateStatsData();
+
+  setupStatsObserver(statsSection);
+}
+
+async function populateStatsData() {
+  try {
+    
+    let kingsData = await getdata("./DATA/kings.json");
+    let erasData = await getdata("./DATA/Eras.json");
+    let dynastiesData = await getdata("./DATA/Dynasties.json");
+
+    setTarget('stat-eras', erasData.length);
+    setTarget('stat-dynasties', dynastiesData.length);
+    setTarget('stat-kings', kingsData.length);
+    setTarget('stat-date', 5000);
+
+  } catch (error) {
+    console.error('Kemet Stats: حدث خطأ أثناء جلب البيانات', error);
+  }
+}
+
+function setTarget(elementId, count) {
+
+  let el = document.getElementById(elementId);
+
+  if (el) {
+    el.setAttribute('data-target', count);
+  }
+}
+
+function setupStatsObserver(targetSection) {
+  let hasAnimated = false;
+
+  let observer = new IntersectionObserver(function(entries, obs){
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        
+
+        let statNumbers = targetSection.querySelectorAll('.kemet-number');
+        
+        statNumbers.forEach(function(numElement){
+            animateCounter(numElement, 2000)
+
+        }); 
+
+        obs.unobserve(entry.target);
+      }
+    });
+
+  },{
+    threshold: 0.75
+  });
+
+  observer.observe(targetSection);
+}
+
+function animateCounter(element, duration = 2000) {
+
+  let target = parseInt(element.getAttribute('data-target'), 10) || 0;
+  let startTime = performance.now();
+
+  function update(currentTime) {
+
+    let elapsed = currentTime - startTime;
+    let progress = Math.min(elapsed / duration, 1);
+
+    let easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    let currentValue = Math.floor(easeProgress * target);
+
+    element.textContent = currentValue 
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      element.textContent = target
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+// ============================================//
+
 let cards = document.querySelectorAll(".card-animation")
 
 let observer = new IntersectionObserver(function(entries){
@@ -64,4 +161,6 @@ antiquitiesBtn.addEventListener("click",function(){
 closeAntiquitiesMsg.addEventListener("click",function(){
  antiquitiesMsg.classList.remove("showMsg")
 })
+
+
 

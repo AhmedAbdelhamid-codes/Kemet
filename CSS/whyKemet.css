@@ -48,6 +48,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -55,6 +57,7 @@ body {
   color: #e8dfc9;
   font-family: Alexandria, sans-serif;
   line-height: 1.9;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -269,9 +272,10 @@ transform: translate(-50%,-40px);
 ═══════════════════════════════════════ */
 
 .hero-section {
-  min-height: 100vh;
-  background:radial-gradient(ellipse at 80% 34%,rgba(176, 125, 38, 0.22),transparent 34%),
- linear-gradient(120deg,rgba(5, 5, 4, 0.75),rgba(10, 9, 7, 0.35)),
+  height: 100vh;
+  background:
+  radial-gradient(ellipse at 80% 34%,rgba(176, 125, 38, 0.22),transparent 34%),
+  linear-gradient(120deg,rgba(5, 5, 4, 0.75),rgba(10, 9, 7, 0.35)),
   url("../phots/hero-why.jpg")    
   center / cover;
   position: relative;
@@ -291,7 +295,7 @@ transform: translate(-50%,-40px);
 }
 
 .display-title {
-  font-size: clamp(56px, 9vw, 112px);
+  font-size: clamp(56px, 7vw, 112px);
   letter-spacing: 2px;
   color: var(--papyrus);
 }
@@ -743,7 +747,7 @@ border-radius: 40px;
   font-weight:600;
 }
 
-/* responsve */
+/*=============responsve=============*/
 
 @media (max-width: 991px) {
 .kemet-nav {
@@ -783,53 +787,59 @@ border-radius: 40px;
 }
 
 @media (max-width: 575px) {
+
 .section {
- padding: 5.2rem 0;
+  padding: 4rem 0;
 }
 
 .hero-section {
- background-position: 58% center;
-}
-
-.hero-pattern {
- display: none;
+  background-position: center;
+  height: auto;
+  min-height: 100vh;
 }
 
 .display-title {
- font-size: 3.65rem;
+  font-size: 2.3rem; 
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+.hero-copy {
+  font-size: 1.1rem;
+}
+
+.section-heading h2 {
+  font-size: 1.8rem;
 }
 
 .hierarchy-node {
- grid-template-columns: 36px 1fr;
+  grid-template-columns: 36px 1fr;
 }
 
 .hierarchy-node small {
- grid-column: 2;
+  grid-column: 2;
 }
 
 .steps-wrap {
- grid-template-columns: 1fr;
- margin-top: 2.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
 }
 
 .step-card {
- min-height: 0;
-}
-
-.creator-emblem {
- width: 115px;
- height: 115px;
+  min-height: 0;
+  padding: 20px;
 }
 
 .creator-frame {
- padding: 2rem 1.5rem;
-} 
+  padding: 1.5rem 1rem;
+}
 
 .final-cta {
- padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 .final-cta h2 {
- font-size: 2.5rem;
+  font-size: 1.8rem;
 }
+
 }

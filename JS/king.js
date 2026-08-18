@@ -64,7 +64,7 @@ Promise.all([
 
     document.getElementById("horo-row").innerHTML=`
         <div class="col-lg-4 col-12">
-          <div class="imge z-2 d-flex">
+          <div class="imge z-2 d-flex pt-5">
             <img class="w-100 h-100" src="${king.image}"  alt="${king.name}">
            </div>
         </div>

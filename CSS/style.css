@@ -376,27 +376,6 @@ background-color: var(--sand-dark);
 }
 
 /* ═══════════════════════════════════════
-     Responsive for pohones
-═══════════════════════════════════════ */
-
-@media (max-width:870px) {
-.hero  .content-top .paragraph{
-width: 100%;
-}
-
-.content-top img{
-  width:320px;
-  height:200px;
-}
-
-.hero .content-top .hero-scroll{
-  animation:fadeUp 1s 0.6s ease both;
-  left: 49.3%; 
-  bottom:95px;
-}
-}
-
-/* ═══════════════════════════════════════
      LINE for main page
 ═══════════════════════════════════════ */
 
@@ -418,7 +397,6 @@ width: 100%;
   height: 1px;
   width: 100%;
   background: linear-gradient(to left,transparent,#c9a84c86,transparent);
-
 }
 
 .explor .content-bottom .tittle-explor{
@@ -507,6 +485,32 @@ position: relative;
   color: var(--gold);
 }
 
+
+/*=============counter========== */
+
+.kemet-stats-section {
+  background-color: #0d0c0a;
+  border-top: 2px solid var(--border);
+}
+
+/* تصميم الكروت بتأثير ذهبي غامق */
+.kemet-card {
+  background: rgba(25, 23, 20, 0.85);
+  border-color: rgba(212, 175, 55, 0.25) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.kemet-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.6) !important;
+}
+
+/* رقم العداد الذهبي */
+.kemet-number {
+  font-size: 2.6rem;
+  color: #e5c158;
+  line-height: 1.2;
+}
 
 /* ═══════════════════════════════════════
      ERAS PAGE
@@ -784,43 +788,6 @@ border-radius: 20px;
 font-weight: 400;
 }
 
-@media (max-width: 992px) {
-.inners-period::before{
-width: 0px;
-height: 0%;
-}
-.inners-period .timeline-item{
- margin-block: 50px;
- width: 100%;
- transition: 0.5s;
- cursor: pointer;
-}
-
-.inners-period .timeline-item .inner{
-  opacity: 0;
-  transform: translatey(100px);
-}
-
-.inners-period .timeline-item.show .inner{
- animation: bouncephone 0.6s 0.3s both;
-}
-
-@keyframes bouncephone {
-  0%{
-     opacity: 0;
-     transform: translatey(100px);
-  }            
-  60%{
-    opacity: 1;
-    transform: translatey(-20px);
-  }
- 100% {
-    opacity: 1;
-    transform: translatey(0);
-  }
-}
-}
-
 .timeline-progress{
     position:fixed;
     bottom:30px;
@@ -878,7 +845,9 @@ height: 0%;
     transition:left .15s linear;
 }
 
-/* dynasties page */
+/* ═══════════════════════════════════════
+        dynasties page
+═══════════════════════════════════════ */
 
 .page-tittle::after{
   position: absolute;
@@ -910,7 +879,7 @@ height: 0%;
   
 }
 
-/* hero */
+/* ===================hero sec======================= */
 
 .hero-Dynasties{
   background-position: center;
@@ -950,13 +919,7 @@ width: 50%;
 animation:fadeUp 1s 0.5s ease both;
 }
 
-@media (max-width: 992px) {
-.hero-Dynasties .description {
-width: 100%;
-}
-}
-
-/* =========description-Dynasties========== */
+/* =========description Dynasties sec========== */
 @keyframes id {
   from{
     transform: translateY(700px);
@@ -1007,14 +970,6 @@ background-color: #1A1209;
   flex-shrink: 1;
 }
 
-@media (max-width: 992px) {
-  .description .imge {
-    width: 100%;
-    height: 50%;
-    flex-shrink: 0;
-  }
-}
-
 .description-content .descriptionshow{
    transform: translate(30px);
   opacity: 0;
@@ -1045,7 +1000,7 @@ line-height: 2;
 font-weight: 500;
 }
 
-/* Dynasties sec */
+/*=================Dynasties sec================ */
 
 .Dynasties-cards::before{
 content: "";
@@ -1063,7 +1018,6 @@ background: linear-gradient(to bottom, transparent, var(--gold-dark),transparent
 
 .Dynasties-cards .right{
   margin-left:auto;
-  /* padding-right: 20px; */
 }
 
 .Dynasties-cards .left{
@@ -1249,25 +1203,7 @@ transition: var(--trans);
   font-weight: 300;
 }
 
-@media (max-width: 993px) {
-.Dynasties-cards::before{
-width: 0px;
-height: 0%;
-}
-.Dynasties-cards .timeline-item{
- margin-block: 50px;
- width: 100%;
- transition: 0.5s;
- cursor: pointer;
-}
-
-.Dynasties-cards .data .dott{
-  width:0px;
-  height:0px;
-}
-}
-
-/* Antiquities sec */
+/*==============Antiquities sec============== */
 
 
 .Antiquities{
@@ -1339,7 +1275,7 @@ transform: scale(1.1);
 .Antiquities .gallery .imge:hover .overlay{
     
   ul .Antiquities-name{
-    bottom: 35px;
+    bottom: 60px;
   }
 
   ul .details{
@@ -1375,6 +1311,7 @@ width:  50vw;
 max-width: 250px;
 margin: auto;
 color: var(--papyrus);
+background-color: transparent;
 transition: var(--trans);
 }
 
@@ -1383,28 +1320,10 @@ transform: translateY(-3px);
 background-color: var(--gold-dark);
 }
 
-@media (max-width : 992px) {
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-}
-}
+/* ═══════════════════════════════════════
+        Dynasty page 
+═══════════════════════════════════════ */
 
-@media (max-width : 768px) {
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(1,1fr);
-  gap:20px;
-}
-
-.tall{
-  grid-row:span 1;
-  grid-column: span 1;
-}
-}
-
-/* Dynasty page */
 /* herp sec */
 .hero-Dynasty{
   height: 85vh;
@@ -1461,7 +1380,7 @@ left: -55px;
   animation:fadeUp 1s 0.5s ease both;
 }
 
-/* details sec */
+/*=============details sec============= */
 
 .details-Dynasty .row{
   border: 1px solid #362B12;
@@ -1493,13 +1412,7 @@ height: 100%;
 background-color: #c9a84c4e;
 }
 
-@media (max-width : 768px) {
-.details-Dynasty .DURATION::before{
-content: none;
-}
-}
-
-/* description section */
+/*================description section=============== */
 
 .description-section{
   min-height: 90vh;
@@ -1562,7 +1475,7 @@ content: none;
   line-height: 2;
 }
 
-/* kings card sec */
+/*===============kings card sec============== */
 
 .kings-sec{
   padding-bottom: 50px;
@@ -1685,7 +1598,7 @@ content: none;
   opacity: 0;
 }
 
-/* highPriests sec */
+/*==============highPriests sec============== */
 
 .highPriests .HP{
   transform: translatey(30px);
@@ -1759,7 +1672,7 @@ content: none;
   display: none;
 }
 
-/* LG — 6 cards per row */
+/* lg */
 @media (min-width: 992px) {
 
     .HP:nth-child(1) .card-hov,
@@ -1776,7 +1689,7 @@ content: none;
     }
 }
 
-/* MD — 4 cards per row */
+/* md */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
     .HP:nth-child(1) .card-hov,
@@ -1793,7 +1706,7 @@ content: none;
     }
 }
 
-/* Mobile — 2 cards per row */
+/* mobile*/
 @media (max-width: 767.98px) {
 
     .HP:nth-child(odd) .card-hov {
@@ -1811,8 +1724,6 @@ content: none;
 .highPriests-cards .card-name:hover ~ .card-hov {
     display: flex;
 }
-
-/* .highPriests-cards .card-hov::a */
 
 .highPriests-cards .card-hov .dtails .number{
   font-size: 50px;
@@ -1860,7 +1771,7 @@ padding: 10px;
   font-size: 16px;
 }
 
-/* btns sec in Dynasty page */
+/*===========btns sec Kemet pages============= */
 
 .btns{
   border-block: 1px solid var(--border);
@@ -1869,6 +1780,13 @@ padding: 10px;
 .btns .next-btn,
 .btns .pre-btn{
   width: 400px;
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+.btns .next-btn,
+.btns .pre-btn{
+  width: 200px;
+}
 }
 
 .btns .next-btn:hover,
@@ -1961,19 +1879,6 @@ animation:fadeUp 1s 0.2s ease both;
   border-radius: 20px;
 }
 
-@media (max-width : 991px) {
-.hero-king{
-  height: auto;
-}
-.hero-king .imge{
-flex-shrink: 0;
-width: 100%;
-height: 50%;
-
-  margin-top: 100px;
-}
-}
-
 .hero-king .detailsKing .dynastyName{
   color: var(--gold);
   font-size: 12px;
@@ -2021,12 +1926,6 @@ height: 50%;
   width: 2px;
   height: 100%;
   background-color: var(--gold);
-}
-
-@media (max-width : 466px) {
-.hero-king .detailsKing .overview{
- width: 100%;
-}
 }
 
 .hero-king .detailsKing li:not(:last-child){
@@ -2212,18 +2111,6 @@ background-color: var(--gold);
   height: 600px;
 }
 
-@media (max-width : 991px) {
-.hero-kings .who{
-margin-top: 120px;
-}
-.hero-kings img{
-  z-index: 2;
-  animation:fadeUp 1s 0.4s ease both;
-  width: 400px;
-  height: 600px;
-}
-}
-
 /*============kings sec=========== */
 
 .kings-sec .sec-header span{
@@ -2392,7 +2279,46 @@ margin-top: 120px;
   font-weight:600;
 }
 
-@media (max-width:991px){
+/*=============responsve=============*/
+
+@media (max-width: 991px) {
+
+.inners-period::before{
+width: 0px;
+height: 0%;
+}
+
+.inners-period .timeline-item{
+ margin-block: 50px;
+ width: 100%;
+ transition: 0.5s;
+ cursor: pointer;
+}
+
+.inners-period .timeline-item .inner{
+  opacity: 0;
+  transform: translatey(100px);
+}
+
+.inners-period .timeline-item.show .inner{
+ animation: bouncephone 0.6s 0.3s both;
+}
+
+@keyframes bouncephone {
+  0%{
+     opacity: 0;
+     transform: translatey(100px);
+  }            
+  60%{
+    opacity: 1;
+    transform: translatey(-20px);
+  }
+ 100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
 .brand-desc{ 
   max-width:100%; 
 }
@@ -2400,7 +2326,104 @@ margin-top: 120px;
 flex-direction:column; 
 text-align:center; 
 }
+
+.hero-kings .who{
+margin-top: 120px;
 }
 
+.hero-kings img{
+  z-index: 2;
+  animation:fadeUp 1s 0.4s ease both;
+  width: 400px;
+  height: 600px;
+}
 
+.hero-Dynasties .description {
+width: 100%;
+}
+
+.description .imge {
+  width: 100%;
+  height: 50%;
+  flex-shrink: 0;
+}
+
+.Dynasties-cards::before{
+width: 0px;
+height: 0%;
+}
+.Dynasties-cards .timeline-item{
+ margin-block: 50px;
+ width: 100%;
+ transition: 0.5s;
+ cursor: pointer;
+}
+
+.Dynasties-cards .data .dott{
+  width:0px;
+  height:0px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.hero-king{
+  height: auto;
+}
+.hero-king .imge{
+flex-shrink: 0;
+width: 100%;
+height: 50%;
+
+  margin-top: 100px;
+}
+
+}
+
+@media (max-width: 870px) {
+.hero  .content-top .paragraph{
+width: 100%;
+}
+
+.content-top img{
+  width:320px;
+  height:200px;
+}
+
+.hero .content-top .hero-scroll{
+  animation:fadeUp 1s 0.6s ease both;
+  left: 49.3%; 
+  bottom:95px;
+}
+}
+
+@media (max-width : 768px) {
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  gap:20px;
+}
+
+.tall{
+  grid-row:span 1;
+  grid-column: span 1;
+}
+
+.hero-Dynasty{
+  height: 100vh;
+}
+
+.details-Dynasty .DURATION::before{
+content: none;
+}
+}
+
+@media (max-width : 466px) {
+.hero-king .detailsKing .overview{
+ width: 100%;
+}
+}
 

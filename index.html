@@ -53,29 +53,30 @@
 
 <svg id="egypt-bg"></svg>
 
-<main class=" mb-5">
-<div class="container">
+<main class="">
 
   <!--=========start hero========= -->
-<section class="hero position-relative vh-100 pb-5">
-  <div class="content-top h-100 d-flex flex-column justify-content-md-start justify-content-center align-items-center">
-   <img src="./phots/logo.png" width="605px" height="375px" alt="">
-   <h1 class="tittle fw-bold text-center">رحلة عبر آلاف السنين من الحضارة الفرعونية</h1>
-   <p class="pt-3 paragraph text-center">من فجر الأسرات إلى نهاية العصر البطلمي — استكشف الملوك والأسرات والآثار التي شكّلت أعظم حضارة في التاريخ</p>
-    <div class="explore-btns d-flex justify-content-center align-items-center gap-lg-3 gap-0 flex-wrap">
-       <a href="./Eras.html" class="btn-journey btn d-flex align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
-        ابدأ الرحلة
-        <i class="fa-solid fa-ankh"></i>
-      </a> 
-       <a href="./whyKemet.html" class="whyKemet-btn btn d-flex justify-content-center align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
-         لماذا كميت؟   
-      </a> 
-    </div>
-   <div class="hero-scroll position-absolute d-flex justify-content-center  flex-column ">
-      <div class="hero-scroll-shape border rounded-4 border-2 border-white" style="width: 25px; height: 45px;"></div>
-      <div class="hero-scroll-dott position-absolute border rounded-4 border-0"></div>
-    </div>
- </div>
+ <section class="hero position-relative vh-100 pb-5">
+   <div class="container">
+      <div class="content-top h-100 d-flex flex-column justify-content-md-start justify-content-center align-items-center">
+           <img src="./phots/logo.png" width="605px" height="375px" alt="">
+            <h1 class="tittle fw-bold text-center">رحلة عبر آلاف السنين من الحضارة الفرعونية</h1>
+            <p class="pt-3 paragraph text-center">من فجر الأسرات إلى نهاية العصر المتأخر — استكشف الملوك والأسرات والآثار التي شكّلت أعظم حضارة في التاريخ</p>
+            <div class="explore-btns d-flex justify-content-center align-items-center gap-lg-3 gap-0 flex-wrap">
+               <a href="./Eras.html" class="btn-journey btn d-flex align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
+               ابدأ الرحلة
+               <i class="fa-solid fa-ankh"></i>
+               </a> 
+               <a href="./whyKemet.html" class="whyKemet-btn btn d-flex justify-content-center align-items-center gap-3 mt-4 fw-bold fs-5" id="btn-journey">
+                لماذا كميت؟   
+               </a> 
+            </div>
+            <div class="hero-scroll position-absolute d-flex justify-content-center  flex-column ">
+              <div class="hero-scroll-shape border rounded-4 border-2 border-white" style="width: 25px; height: 45px;"></div>
+              <div class="hero-scroll-dott position-absolute border rounded-4 border-0"></div>
+            </div>
+      </div>
+  </div>
 </section>
 <!--=========end hero========= -->
 
@@ -86,13 +87,14 @@
 <!--=========end line========= -->
 
 <!--=========start explor========= -->
-<section class="explor vh-100 pt-5 position-relative" >
-<div class="content-bottom">
-<h2 class="tittle-explor pb-2 text-center">اختر مسارك الاستكشافي</h2>
-<h3 class="sub-tittle_explor pb-5 text-center fs-5">استكشف بلا ترتيب</h3>
+<section class="explor h-auto py-5 position-relative" >
+  <div class="container">
+       <div class="content-bottom">
+        <h2 class="tittle-explor pb-2 text-center">اختر مسارك الاستكشافي</h2>
+        <h3 class="sub-tittle_explor pb-5 text-center fs-5">استكشف بلا ترتيب</h3>
 <!-- ===========cards============= -->
  
- <div class="cards d-flex justify-content-center align-content-center gap-5 flex-wrap">
+ <div class="cards d-flex justify-content-center align-content-center gap-5 flex-wrap mb-5">
 
      <!-- ==========card 1=========== -->
 
@@ -135,13 +137,68 @@
 
  </div>
 </div>
+  </div>
 </section>
-</div>
+
+<!--===========KEMET STATS SECTION==========-->
+<section class="kemet-stats-section py-5 h-auto text-white position-relative" id="kemet-stats">
+  <div class="container py-4">
+    
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <span class="text-warning text-uppercase small d-block mb-1" style="letter-spacing: 1px;">حضارة تمتد لآلاف السنين</span>
+      <h2 class="fw-bold mb-3">نظرة على تاريخ كيميت</h2>
+      <div style="width: 60px; height: 2px; background: #d4af37; margin: 0 auto;"></div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="row g-4 justify-content-center text-center">
+      
+      <!-- 1. العصور -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="kemet-card h-100 p-4 rounded-3 border">
+          <div class="kemet-number fw-bold" id="stat-eras" data-target="234">0</div>
+          <div class="h5 mt-2 mb-1">عصور تاريخية</div>
+          <p class="small text-secondary mb-0">من عصور ما قبل الأسرات حتى العصر المتأخر</p>
+        </div>
+      </div>
+
+      <!-- 2. الأسر -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="kemet-card h-100 p-4 rounded-3 border">
+          <div class="kemet-number fw-bold" id="stat-dynasties" data-target="213">0</div>
+          <div class="h5 mt-2 mb-1">أسرة حاكمة</div>
+          <p class="small text-secondary mb-0">أسر تعاقبت على حكم وتوحيد القطرين</p>
+        </div>
+      </div>
+
+      <!-- 3. الملوك -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="kemet-card h-100 p-4 rounded-3 border">
+          <div class="kemet-number fw-bold" id="stat-kings" data-target="120">0</div>
+          <div class="h5 mt-2 mb-1">ملك وحاكم</div>
+          <p class="small text-secondary mb-0">قادة وفراعنة تركوا بصمتهم في التاريخ</p>
+        </div>
+      </div>
+
+      <!-- 4. المعالم -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="kemet-card h-100 p-4 rounded-3 border">
+          <div class="kemet-number fw-bold" id="stat-date" data-target="34">0</div>
+          <div class="h5 mt-2 mb-1">سنة من التاريخ المصري القديم</div>
+          <p class="small text-secondary mb-0">قرون من الانجازات والحضارة</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- footer -->
 
-<footer class="kemet-footer pt-5">
+<footer class="kemet-footer pt-5 d-flex align-items-center">
   <div class="container">
     <div class="row gy-5">
 

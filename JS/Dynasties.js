@@ -184,7 +184,7 @@ Promise.all([
                          <li class="kings-count">${Dynasties[i].kings.length} ملوك</li>
                         </ul>
                        <h3>${Dynasties[i].description_card}</h3>
-                         <div class="footer w-100 d-flex justify-content-between align-items-center">
+                         <div class="footer w-100 d-flex justify-content-between align-items-center flex-wrap gap-lg-0 gap-2">
                            <a href="./Dynasty.html?dynasty-id=${Dynasties[i].id}" class="link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-2 align-items-center ">
                            استكشف الاسرة
                             <i class="fa-solid fa-arrow-left icon"></i>
@@ -213,7 +213,7 @@ Promise.all([
                         <p>ملاحظة <br>
                           ${Dynasties[i].note}
                         </p>
-                       <div class="footer w-100 d-flex justify-content-between align-items-center flex-wrap gap-lg-0 gap-3">
+                       <div class="footer w-100 d-flex justify-content-between align-items-center flex-wrap gap-lg-0 gap-2">
                            <span class="nothig">⚠️ معلومات تاريخية محدودة</span>
                             <span class="d-block capital">العاصمة ${Dynasties[i].Capital}</span>
                          </div>
@@ -256,7 +256,7 @@ Promise.all([
                          <li class="kings-count">${Dynasties[i].kings.length} ملوك</li>
                         </ul>
                        <h3>${Dynasties[i].description_card}</h3>
-                         <div class="footer w-100 d-flex justify-content-between align-items-center">
+                         <div class="footer w-100 d-flex justify-content-between align-items-center flex-wrap gap-lg-0 gap-2">
                            <a href="./Dynasty.html?dynasty-id=${Dynasties[i].id}" class="link-underline link-underline-opacity-0 explore-btn justify-content-center d-flex gap-2 align-items-center ">
                            استكشف الاسرة
                             <i class="fa-solid fa-arrow-left icon"></i>
@@ -285,7 +285,7 @@ Promise.all([
                         <p>ملاحظة <br>
                           ${Dynasties[i].note}
                         </p>
-                       <div class="footer w-100 d-flex justify-content-between align-items-center flex-wrap gap-lg-0 gap-3">
+                       <div class="footer w-100 d-flex justify-content-between align-items-center flex-wrap gap-lg-0 gap-2">
                            <span class="nothig">⚠️ معلومات تاريخية محدودة</span>
                             <span class="d-block capital">العاصمة ${Dynasties[i].Capital}</span>
                          </div>
@@ -299,6 +299,8 @@ Promise.all([
 
         cards.innerHTML= cartona
 
+      //===========gallary=============//
+
         let gallery = document.querySelector(".gallery")
         let Antiquities_tittle = document.querySelector(".Antiquities-tittle")
         let cartonaa ="";
@@ -311,7 +313,7 @@ Promise.all([
 
         for(let i = 0; i < era.eraPhotos.length; i++){
             cartonaa += `
-             <div class="item ${era.eraPhotos[i].shap} rounded-4 AntiquitiesShow">
+             <div class="${era.eraPhotos[i].shap} rounded-4 AntiquitiesShow">
             <div class="imge position-relative w-100 h-100 overflow-hidden rounded-4">
              <img src="${era.eraPhotos[i].photo}" class="z-3 w-100 h-100 object-fit-cover rounded-4">
              <div class="overlay z-2 position-absolute">
@@ -457,5 +459,19 @@ pre_btn.addEventListener("click",function(){
     })
 });
 
+// =====================//
 
+let antiquitiesBtn = document.getElementById("antiquitiesBtn");
+
+let antiquitiesMsg = document.getElementById("antiquitiesMsg");
+
+let closeAntiquitiesMsg = document.getElementById("closeAntiquitiesMsg");
+
+antiquitiesBtn.addEventListener("click",function(){
+ antiquitiesMsg.classList.add("showMsg")
+})
+
+closeAntiquitiesMsg.addEventListener("click",function(){
+ antiquitiesMsg.classList.remove("showMsg")
+})
 
